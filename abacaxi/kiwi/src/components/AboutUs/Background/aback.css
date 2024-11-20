@@ -1,0 +1,21 @@
+.ab {
+    display: grid;
+
+    grid-template-columns: 1fr 3.5fr 1.5fr;
+    grid-template-areas: 
+    "aside main sidebar"
+    ;
+}
+aside{
+    grid-area: aside;
+    background-color: antiquewhite;
+}
+
+.main{
+    grid-area: main;
+}
+
+.s{
+    grid-area: sidebar;
+    background-color: rgb(14, 47, 36);
+}

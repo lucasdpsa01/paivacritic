@@ -1,0 +1,23 @@
+.about{
+    display: grid;
+    
+    height: 100vh;
+    grid-template-rows: 0.4fr 2.1fr 1.5fr;
+    grid-template-areas: 
+    "header"
+    "amain"
+    "footer"
+    ;
+}
+
+.header{
+    grid-area: header;
+}
+
+.amain{
+    grid-area: amain;
+}
+
+.afooter{
+    grid-area: footer;
+}
