@@ -1,0 +1,25 @@
+.header {
+    background-color: rgb(14, 14, 31);
+    color: azure;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;   
+}
+
+.header-links{
+    background-color: rgb(127, 161, 255);
+    width: 15%;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+.header-links p{
+    padding-right: 5%;
+}
+
+.link{
+    text-decoration: none;
+    color: white;
+}
