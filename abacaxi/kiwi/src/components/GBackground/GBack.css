@@ -1,0 +1,23 @@
+.gmain {
+    display: grid;
+    grid-template-columns: 1fr 3.5fr 0.5fr;
+    grid-template-areas: 
+    "aside gamain other"
+    ;
+
+}
+
+aside{
+    grid-area: aside;
+
+    background-color: rgb(12, 15, 41);
+}
+.gamain{
+    grid-area: gamain;
+}
+
+.other{
+    grid-area: other;
+
+    background-color: rgb(24, 20, 149);
+}
