@@ -1,5 +1,15 @@
+import Header from "../../Components/Header"
+import SobreBackground from "../../Components/SobreBackground"
+import Footer from "../../Components/Footer"
+
+import "./index.css"
+
 export default function Sobre() {
     return(
-        <h1>oi gays</h1>
+        <div>
+            <Header/>
+            <SobreBackground/>
+            <Footer/>
+        </div>
     )
 }

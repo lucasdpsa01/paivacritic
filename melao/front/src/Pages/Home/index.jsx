@@ -6,10 +6,10 @@ import "./index.css"
 
 export default function Home() {
     return(
-        <div>
-            <Header/>
-            <CasaBackground/>
-            <Footer/>
+        <div className="Home">
+            <Header className="header"/>
+            <CasaBackground className="casabackground"/>
+            <Footer className="footer"/>
         </div>
     )
 }
