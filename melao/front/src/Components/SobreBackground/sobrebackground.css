@@ -1,0 +1,7 @@
+.sobrebackground{
+    background-color: rgb(10, 10, 34);
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+}

@@ -1,8 +1,10 @@
 import SobreMain from "../SobreMain";
 
+import "./sobrebackground.css"
+
 export default function SobreBackground() {
     return(
-        <div>
+        <div className="sobrebackground">
             <SobreMain/>
         </div>
     )

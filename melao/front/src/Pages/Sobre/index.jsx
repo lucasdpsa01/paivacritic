@@ -6,7 +6,7 @@ import "./index.css"
 
 export default function Sobre() {
     return(
-        <div>
+        <div className="sobre">
             <Header/>
             <SobreBackground/>
             <Footer/>
