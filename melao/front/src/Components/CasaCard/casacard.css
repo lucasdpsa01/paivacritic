@@ -1,16 +1,110 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Espaço uniforme entre os cartões */
+    justify-content: center; /* Centraliza os cartões em telas menores */
+}
+
+.card {
+    width: calc(100% - 20px); /* Para telas pequenas */
+    max-width: 300px; /* Limita o tamanho em telas maiores */
+    background-color: rgb(14, 14, 31);
+    border: 1px solid rgb(14, 14, 31);
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    margin: 10px; /* Espaçamento ao redor */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5%;
+}
+
+.card h2 {
+    padding: 5px;
+    color: #f9f7f7;
+    text-align: center;
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.card p {
+    color: #f9f7f7;
+    font-size: 1em;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.card img {
+    width: 100%; /* Ajusta a imagem ao tamanho do cartão */
+    height: auto; /* Mantém a proporção */
+    border-radius: 8px; /* Suaviza as bordas */
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.rating {
+    background-color: rgb(166, 160, 248);
+    padding: 10px 20px;
+    border-radius: 25px;
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Media Queries para Responsividade */
+
+/* Para telas menores que 768px (dispositivos móveis) */
+@media (max-width: 768px) {
+    .card {
+        width: 90%; /* O cartão ocupa 90% da largura da tela */
+    }
+
+    .card p {
+        font-size: 3vh; /* Tamanho da fonte menor para textos */
+    }
+}
+
+/* Para telas menores que 480px (telefones pequenos) */
+@media (max-width: 480px) {
+    .card {
+        padding: 10px; /* Reduz o padding para telas pequenas */
+    }
+
+    .card h2 {
+        font-size: 1em; /* Reduz o título */
+    }
+
+    .card p {
+        font-size: 2.5vh; /* Ajusta o texto ainda menor */
+    }
+
+    .rating {
+        font-size: 0.9em; /* Ajusta o texto do rating */
+        padding: 8px;
+    }
+}
+
+/*.container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .card {
     width: auto;
     background-color: rgb(14, 14, 31);
     border: 1px solid rgb(14, 14, 31);
     border-radius: 16px; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    margin-right: 10px;
     overflow: hidden;
 
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
+    padding: 5%;
 }
 
 .card h2 {
@@ -27,7 +121,6 @@ img{
     padding-top: 25px;
     width: 300px;
     height: 300px;
-    
     border-radius: 8px 8px 0 0;
     
 }
@@ -35,4 +128,4 @@ img{
     background-color: rgb(166, 160, 248);
     padding: 4%;
     border-radius: 25px;
-}
+}*/

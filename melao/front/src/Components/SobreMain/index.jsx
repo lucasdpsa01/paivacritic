@@ -3,11 +3,27 @@ import image from "../../images/elpizo.jpeg"
 
 export default function SobreMain() {
     return(
-        <div className="container-sobre">
+        <div className="container">
+            <div className="card">
+                <div className="image">
+                    <img src={image} alt="elpizo"/>
+                </div>
+                <div className="texto">
+                    <h2>Paiva</h2>
+                    <p>Oi! Eu sou o Paiva, um apaixonado por jogos e futuro desenvolvedor de games. Este site é meu cantinho para compartilhar os jogos que marcaram meu ano — tanto os que adorei quanto aqueles que me deram dor de cabeça!
+                    Um aviso amigável: não levem as notas tão a sério! 😅😅 Alguns jogos ainda estão no meu backlog, e outros mal terminei. Tenho certeza de que, ao rejogá-los no futuro, minhas opiniões podem mudar (e as notas também).
+                    </p>
+                </div>
+            </div>
+        </div>
+
+       /* <div className="container-sobre">
             <div className="eu">
                 <img src={image} alt="elpizo" />
-                <h1>Hunter2801</h1>
-                <h3>Paiva de Sá</h3>
+                <div className="eu-hs">
+                    <h1>Hunter2801</h1>
+                    <h3>Paiva de Sá</h3>
+                </div>
             </div>
             <div className="eu-p">
                 <p>
@@ -29,6 +45,6 @@ export default function SobreMain() {
                 </ul>
             </div>
             
-        </div>
+        </div>*/
     )
 }

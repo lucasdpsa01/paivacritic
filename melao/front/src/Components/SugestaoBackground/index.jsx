@@ -1,9 +1,10 @@
-import Form from "../Form"
+import imageb from "../../images/emoji.png"
 
 export default function SugestaoBackground() {
     return(
         <div>
-            <Form/>
+            <img src={imageb} />
+            <h1>OPS! ESTA PAGINA ESTA INDISPONIVEL</h1>
         </div>
     )
 }
