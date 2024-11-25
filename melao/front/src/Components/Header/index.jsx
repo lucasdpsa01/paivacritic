@@ -8,7 +8,7 @@ export default function Header() {
             <Link className="link" to='/'><h1>paivacritic</h1></Link>
             <div className="header-links">
                 <Link className="link" to='/sobre'>About Us</Link>
-                <Link className="link" to='/sugestion'>Sugestões</Link>
+                <Link className="link" to='/sugestao'>Sugestões</Link>
             </div>
         </div>
     )
