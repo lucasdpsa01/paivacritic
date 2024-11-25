@@ -1,4 +1,4 @@
-import a from "../assets/blasphemous1.webp";
+import a from "../assets/blasphemous1.jpg";
 import b from "../assets/blasphemous2.jpg";
 import c from "../assets/bloodstained.webp";
 import d from "../assets/celeste.png";

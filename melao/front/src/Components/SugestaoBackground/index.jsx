@@ -1,9 +1,9 @@
-import Sugestaomain from "../SugestaoMain";
+import Form from "../Form"
 
 export default function SugestaoBackground() {
     return(
         <div>
-            <SugestaoBackground/>
+            <Form/>
         </div>
     )
 }

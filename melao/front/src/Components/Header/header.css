@@ -1,18 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+15&display=swap');
+
+.jersey-15-regular {
+    font-family: "Jersey 15", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
 .header {
     background-color: rgb(14, 14, 31);
-    color: azure;
 
     display: flex;
     justify-content: space-evenly;
     align-items: center;   
 }
 
-.header-links{
-    background-color: rgb(127, 161, 255);
-    width: 15%;
+.header h1{
+    font-family: "Jersey 15", sans-serif;
+    font-size: 7vh;
+}
 
+.header-links{
+    width: 18%;
+    font-size: 3vh;
+    font-family: "Jersey 15", sans-serif;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .header-links p{
