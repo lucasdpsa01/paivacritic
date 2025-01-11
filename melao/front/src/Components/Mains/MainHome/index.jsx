@@ -1,15 +1,15 @@
-import CasaCard from "../CasaCard";
+import CardMain from "../../CardMain"
 
-import "./casamain.css"
+import "./mainhome.css"
 
-export default function CasaMain() {
+export default function MainHome() {
     return (
-        <div className="casa-main">
+        <div className="main-home">
             <div className="">
                 <h1>REVIEW DOS JOGOS QUE JOGUEI EM 2024</h1>
             </div>
             <div>
-                <CasaCard/>
+                <CardMain/>
             </div>
         </div>
     );

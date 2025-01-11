@@ -1,13 +1,12 @@
 import Header from "../../Components/Header"
-import SugestaoBackground from "../../Components/SugestaoBackground"
+import BackgroundSugestao from "../../Components/Background/BackgroundSugestao"
 import Footer from "../../Components/Footer"
 
 export default function Sugestion() {
     return(
-        //<div>oi</div>
         <div>
             <Header/>
-            <SugestaoBackground/>
+            <BackgroundSugestao/>
             <Footer/>
         </div>
     )

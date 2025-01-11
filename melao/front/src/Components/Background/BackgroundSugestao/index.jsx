@@ -1,6 +1,6 @@
-import imageb from "../../images/emoji.png"
+import imageb from "../../../images/emoji.png"
 
-export default function SugestaoBackground() {
+export default function BackgroundSugestao() {
     return(
         <div>
             <img src={imageb} />
