@@ -1,7 +1,5 @@
-.casa-main{
-    height: 100%;
-    width: 50%;
+.main-home{
+    margin: 0;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
 }
