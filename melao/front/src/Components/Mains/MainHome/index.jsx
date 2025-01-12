@@ -1,14 +1,14 @@
 import CardMain from "../../CardMain"
 
-import "./mainhome.css"
+import "./index.css"
 
 export default function MainHome() {
     return (
-        <div className="main-home">
+        <div className="mainhome">
             <div className="main-h1">
-                <h1>REVIEW DOS JOGOS QUE JOGUEI EM 2024</h1>
+                <h1>Review de Jogos</h1>
             </div>
-            <div className="main-cardmain">
+            <div className="main-card">
                 <CardMain/>
             </div>
         </div>

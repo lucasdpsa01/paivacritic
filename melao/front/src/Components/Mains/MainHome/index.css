@@ -1,0 +1,14 @@
+.mainhome{
+    display: flex;
+    flex-direction: column;
+}
+
+.main-h1{
+    display: flex;
+    justify-content: center;
+}
+
+.main-card{
+    display: flex;
+    justify-content: center;
+}
