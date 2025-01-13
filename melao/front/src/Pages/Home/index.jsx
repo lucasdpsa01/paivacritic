@@ -1,6 +1,6 @@
 import Header from "../../Components/Header"
 import BackgroundHome from "../../Components/Background/BackgroundHome"
-import Footer from "../../Components/Footer"
+import Footer from "../../Components/Footer/Geral"
 
 import "./index.css"
 

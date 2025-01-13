@@ -1,6 +1,6 @@
 import Header from "../../Components/Header"
 import BackgroundSugestao from "../../Components/Background/BackgroundSugestao"
-import Footer from "../../Components/Footer"
+import Footer from "../../Components/Footer/Geral"
 
 export default function Sugestion() {
     return(

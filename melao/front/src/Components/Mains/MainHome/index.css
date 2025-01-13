@@ -17,9 +17,24 @@
     display: flex;
     justify-content: center;
     font-size: 5vh;
+    padding-top: 20px;
 }
 
 .main-card{
     display: flex;
     justify-content: center;
+}
+
+@media (max-width: 1024px){
+    .main-h1{
+        font-size: 4vh;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px){
+    .main-h1{
+        font-size: 4vh;
+        text-align: center;
+    }
 }
