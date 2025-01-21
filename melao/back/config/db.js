@@ -5,4 +5,4 @@ const sequelize = new Sequelize('postgres', 'postgres', 'ldps2801', {
     dialect: 'postgres',
 });
 
-module.exports = sequelize;
+module.exports = sequelize;//dfgfdg
