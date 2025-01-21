@@ -1,5 +1,5 @@
 const { Sequelize } = require('sequelize');
-
+//aff
 const sequelize = new Sequelize('postgres', 'postgres', 'ldps2801', {
     host: 'localhost',
     dialect: 'postgres',
