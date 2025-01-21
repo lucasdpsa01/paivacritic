@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require ('cors');
 app.use(cors());
 
-//beta
+//beta 1.0
 const app = express();
 app.use(express.json());
 
