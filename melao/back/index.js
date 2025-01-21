@@ -1,7 +1,11 @@
 const express = require('express');
-const app = express();
 const cors = require ('cors');
-const PORT = 3000;
+app.use(cors());
+
+const app = express();
+app.use(express.json());
+
+const sequelize = require('./config/db');
 
 sequelize.sync({ alter: true })
 .then(() => {
@@ -11,10 +15,9 @@ sequelize.sync({ alter: true })
     console.log("Erro!");
 });
 
-app.use(cors());
-app.use(express.json());
+const rotasugestao = require('./routes/sugestao');
+app.use('/', rotasugestao);
 
-
-app.listen(PORT, () => {
+app.listen(prompt, () => {
     console.log("Servidor aguardando requisições");
 });

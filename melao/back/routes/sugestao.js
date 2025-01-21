@@ -1,28 +1,30 @@
 const express = require('express');
 const router = express.Router();
-const Sugestao = require('../models/sugestao');
+const sugestao = require('../models/sugestao');
 
 //rota q cria a sugestao da piazada
 router.post('/sugestao', async (req, res) => {
-    const sugestoes = await Sugestao.create({
+
+    const sugestoes = await sugestao.create({
         nome: req.body.nome,
-        sugestao: req.body.sugestao
+        sugestao: req.body.descricao
     });
+
     res.status(201).json(sugestoes);
 })
 
 //deleta uma sugestao
-router.delete('/sugestao', async(req, res) =>{
+router.delete('/sugestao/:nome', async(req, res) =>{
     const id_sugestao = req.params.id_sugestao;
 
-    const sugestao = await Sugestao.findByPk(id_sugestao);
+    const sugestoes = await sugestao.findByPk(id_sugestao);
 
-    if(!sugestao) {
+    if(!sugestoes) {
         return res.send("Erro ao deletar");
     }
 
-    await sugestao.destroy();
-    res.send("Deletado com sucesso!")
+    await sugestoes.destroy();
+    res.send("Deletado com sucesso!");
 });
 
 module.exports = router;

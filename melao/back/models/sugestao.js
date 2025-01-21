@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 const database = require('../config/db');
 
-const Sugestao = database.define('sugestao', {
+const sugestao = database.define('sugestao', {
     id: {
         type:Sequelize.INTEGER,
         autoIncrement:true,
@@ -12,7 +12,7 @@ const Sugestao = database.define('sugestao', {
         type: Sequelize.STRING,
         allowNull: false
     },
-    sugestao: Sequelize.STRING
-})
+    descricao: Sequelize.STRING
+});
 
-module.exports = Sugestao
+module.exports = sugestao
