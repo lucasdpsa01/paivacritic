@@ -1,18 +1,25 @@
-const Sequelize = require('sequelize');
-const database = require('../config/db');
+const sequelize = require('../config/db');
+const datatype = require('sequelize');
 
-const sugestao = database.define('sugestao', {
+const Sugestao = sequelize.define('Sugestao', {
     id: {
-        type:Sequelize.INTEGER,
+        type:datatype.INTEGER,
         autoIncrement:true,
         allowNull:false,
         primaryKey:true
     },
     nome: {
-        type: Sequelize.STRING,
+        type: datatype.STRING,
         allowNull: false
     },
-    descricao: Sequelize.STRING
+    recomendacao: {
+        type: datatype.STRING,
+        allowNull: false
+    },
+}, {
+    timestamps: true
 });
 
-module.exports = sugestao
+module.exports = Sugestao;
+
+//COMPLETO 23/01
