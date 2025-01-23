@@ -1,23 +1,23 @@
-import a from "../assets/blasphemous1.jpg";
-import b from "../assets/blasphemous2.jpg";
-import c from "../assets/bloodstained.webp";
-import d from "../assets/celeste.png";
-import e from "../assets/crypt.webp";
-import f from "../assets/darksouls1.jpg";
-import g from "../assets/darksouls2.png";
-import h from "../assets/devilmaycry.jpg";
+import a from "../assets/blas1.jpg";
+import b from "../assets/blas2.jpg";
+import c from "../assets/blood.jpg";
+import d from "../assets/cel.jpg";
+import e from "../assets/crypt.jpg";
+import f from "../assets/ds1.jpg";
+import g from "../assets/ds2.jpg";
+import h from "../assets/dmc1.jpg";
 import i from "../assets/metal.jpg" ;
-import j from "../assets/network1.jpg";
+import j from "../assets/network.jpeg";
 import k from "../assets/network2.jpg";
 import l from "../assets/legends1.jpg";
-import m from "../assets/xdive.webp";
+import m from "../assets/xdive.jpg";
 import n from "../assets/legends2.jpg";
-import o from "../assets/castlevania1.jpg";
-import p from "../assets/portraid.jpg";
+import o from "../assets/cast1.jpg";
+import p from "../assets/portrait.jpg";
 import q from "../assets/order.jpg";
-import r from "../assets/persona3.webp";
+import r from "../assets/persona.jpg";
 import s from "../assets/dawn.jpg";
-import t from "../assets/symphony.webp";
+import t from "../assets/symphony.jpg";
 import u from "../assets/harmony.jpg";
 
 export const jogos = [
