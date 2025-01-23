@@ -1,6 +1,5 @@
 import { jogos } from "../../data/jogos"
 
-import "./cardmain.css"
 
 export default function CardMain() {
     return(
