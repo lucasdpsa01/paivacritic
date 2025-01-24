@@ -1,4 +1,4 @@
-import SobreMain from "../SobreMain"
+import SobreMain from "../../SobreMain"
 
 import "./sobrebackground.css"
 

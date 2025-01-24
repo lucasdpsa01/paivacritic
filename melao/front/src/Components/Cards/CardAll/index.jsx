@@ -1,8 +1,8 @@
-import { jogos } from "../../data/jogos"
+import { jogos } from "../../../data/jogos"
 
-import "./casacard.css"
+import "./cardall.css"
 
-export default function CasaCard() {
+export default function CardAll() {
     return(
         <div className="container">
             {jogos.map((jogo) => (

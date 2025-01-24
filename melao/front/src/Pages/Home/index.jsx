@@ -1,5 +1,5 @@
 import Header from "../../Components/Header"
-import CasaBackground from "../../Components/CasaBackground"
+import BackgroundMain from "../../Components/Backgrounds/BackgroundMain"
 import Footer from "../../Components/Footer"
 
 import "./index.css"
@@ -8,7 +8,7 @@ export default function Home() {
     return(
         <div className="Home">
             <Header className="header"/>
-            <CasaBackground className="casabackground"/>
+            <BackgroundMain/>
             <Footer className="footer"/>
         </div>
     )

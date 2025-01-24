@@ -1,5 +1,5 @@
 import Header from "../../Components/Header"
-import SobreBackground from "../../Components/SobreBackground"
+import SobreBackground from "../../Components/Backgrounds/BackgroundSobre"
 import Footer from "../../Components/Footer"
 
 import "./index.css"
