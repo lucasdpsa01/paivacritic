@@ -3,6 +3,10 @@ const app = express();
 const cors = require ('cors');
 const PORT = 3000;
 
+
+const sequelize = require('./config/db');
+
+
 sequelize.sync({ alter: true })
 .then(() => {
     console.log("BD sincronizado");

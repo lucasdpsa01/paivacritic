@@ -21,5 +21,3 @@ const Sugestao = sequelize.define('Sugestao', {
 });
 
 module.exports = Sugestao;
-
-//COMPLETO 23/01
