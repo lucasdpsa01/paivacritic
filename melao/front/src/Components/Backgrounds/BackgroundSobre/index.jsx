@@ -1,11 +1,11 @@
-import SobreMain from "../../SobreMain"
+import MainSobre from "../../Mains/MainSobre"
 
 import "./sobrebackground.css"
 
 export default function SobreBackground() {
     return(
         <div className="sobrebackground">
-            <SobreMain/>
+            <MainSobre/>
         </div>
     )
 }

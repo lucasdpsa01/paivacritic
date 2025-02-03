@@ -1,13 +1,8 @@
 import { jogos } from "../../../data/jogos"
 
-<<<<<<<< HEAD:melao/front/src/Components/Cards/CardAll/index.jsx
 import "./cardall.css"
 
 export default function CardAll() {
-========
-
-export default function CardMain() {
->>>>>>>> main:melao/front/src/Components/CardMain/index.jsx
     return(
         <div className="container">
             {jogos.map((jogo) => (
