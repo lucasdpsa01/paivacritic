@@ -1,5 +1,6 @@
 import { jogos } from "../../../data/jogos"
 
+import "./cardcast.css"
 
 export default function CardCast() {
     return(
