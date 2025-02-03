@@ -1,5 +1,6 @@
 import { jogos } from "../../../data/jogos"
 
+import "./cardmega.css"
 
 export default function CardMega() {
     return(
@@ -10,7 +11,7 @@ export default function CardMega() {
                     <div key={jogo.id} className="card-megaman">
                         <img src={jogo.images} alt={jogo.nome} />
                         <h2>{jogo.nome}</h2>
-                        <div className="rating">
+                        <div className="rating-megaman">
                             <p>{jogo.rating}</p>
                         </div>
                     </div>

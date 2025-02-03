@@ -1,4 +1,4 @@
-.container-cast{
+.container-megaman{
     display: grid;
     grid-auto-flow: column;
     scroll-behavior: smooth;
@@ -10,17 +10,17 @@
     width: 1100px;
 }
 
-.container-cast::-webkit-scrollbar {
+.container-megaman::-webkit-scrollbar {
     height: 8px;
 }
 
-.container-cast::-webkit-scrollbar-thumb {
+.container-megaman::-webkit-scrollbar-thumb {
     background: #555;
     border-radius: 4px;
 }
 
 
-.card-cast{
+.card-megaman{
     width: 150px;
     padding: 10px;
     border-radius: 10px;
@@ -28,11 +28,11 @@
     position: relative;
 }
 
-.card-cast h2{
+.card-megaman h2{
     font-size: 20px;
 }
 
-.card-cast img {
+.card-megaman img {
     width: 100%;
     height: 220px;
     object-fit: cover;
