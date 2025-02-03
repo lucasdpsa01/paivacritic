@@ -15,3 +15,12 @@ const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, proces
 module.exports = sequelize;
 
 //COMPLETO 23/01
+const {Sequelize} = require('sequelize');
+
+const sequelize = new Sequelize('postgres', 'postgres', 'ldps2801', {
+    host: 'localhost',
+    dialect: 'postgres',
+    port: 5432,
+});
+
+module.exports = sequelize;
