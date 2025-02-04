@@ -1,10 +1,9 @@
-import imageb from "../../images/emoji.png"
+import Comment from "../../Comment"
 
 export default function SugestaoBackground() {
     return(
         <div>
-            <img src={imageb} />
-            <h1>OPS! ESTA PAGINA ESTA INDISPONIVEL</h1>
+            <Comment/>
         </div>
     )
 }
