@@ -17,8 +17,8 @@ const Sugestao = database.define('Sugestao', {
         allowNull: false
     },
 }, {
-    timestamps: true, // Cria campos createdAt e updatedAt automaticamente
-    tableName: 'sugestoes' // Define o nome da tabela no banco
+    timestamps: true, 
+    tableName: 'sugestoes' 
 });
 
 module.exports = Sugestao;
