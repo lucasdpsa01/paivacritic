@@ -1,27 +1,3 @@
-/*const Sequelize = require('sequelize');
-const database = require('../config/db');
-
-const Sugestao = database.define('Sugestao', {
-    id: {
-        type:Sequelize.INTEGER,
-        autoIncrement:true,
-        allowNull:false,
-        primaryKey:true
-    },
-    nome: {
-        type: Sequelize.STRING,
-        allowNull: false
-    },
-    recomendacao: {
-        type: Sequelize.STRING,
-        allowNull: false
-    },
-}, {
-    timestamps: true
-});
-
-module.exports = Sugestao;
-*/
 const { DataTypes } = require('sequelize');
 const database = require('../config/db');
 
