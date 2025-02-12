@@ -1,37 +1,7 @@
 .container-sobre{
-    max-height: 500px;
-    max-width: 20%;
-    max-width: 300px;
+    background-color: aqua;
+    width: 40%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    
-    background-color: rgb(20, 14, 60);
-    padding: 30px;
-
-    border-radius: 25px;
-}
-
-.container-sobre h1{
-    color: white;
-}
-
-.container-sobre p{
-    color: white;
-    text-align: center;
-    font-size: 1rem;
-}
-
-.container-sobre img{
-    height: auto;
-    width: 200px;
-    clip-path: circle(40%);
-}
-
-@media (max-width: 768px) {
-    .container-sobre{
-        max-width: 250px;
-        max-width: 20%;
-        max-width: 300px;
-    }
+    gap: 10px;
 }

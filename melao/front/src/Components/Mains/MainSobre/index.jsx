@@ -1,17 +1,32 @@
-import "./index.css"
+import htmlicon from '../../../svg/html.svg'
+import cssicon from '../../../svg/css.svg'
+import jsicon from '../../../svg/js.svg'
+import reacticon from '../../../svg/react-js.svg'
+import nodeicon from '../../../svg/node-js.svg'
+import pythonicon from '../../../svg/python.svg'
 
-import image from "../../../images/elpizo.jpeg"
+import "./index.css"
 
 export default function MainSobre() {
     return (
         <div className="container-sobre">
-            <img src={image} alt="elpi" />   
-            <h1>Paiva</h1>
-            <p>Oi! Eu sou o Paiva, um apaixonado por jogos e futuro desenvolvedor de games. 
-                Este site é meu cantinho para compartilhar os jogos que marcaram meu ano — tanto os que adorei quanto aqueles que me deram dor de cabeça! 
-                Um aviso amigável: não levem as notas tão a sério! 😅😅 Alguns jogos ainda estão no meu backlog, e outros mal terminei. 
-                Tenho certeza de que, ao rejogá-los no futuro, minhas opiniões podem mudar (e as notas também).
+            <div className="texto">
+                <h1>Oi! Eu sou Lucas D. Paiva de Sá</h1>
+                <p>Sou criativo, auto motivado e fascinado em melhorar. Estou sempre em busca de conhecimentos que me possibilitem evoluir. Sou um rapaz inquieto quando não consigo obter soluções.
+                    Habilidades interpessoais e conhecimento diversificado são meus principais diferenciais.
                 </p>
+            </div>
+            <div className="conhecimento">
+                <h2>Conhecimento Técnico</h2>
+                <div className='icons'>
+                    <img src={htmlicon} alt="html-icon" width={50}/>
+                    <img src={cssicon} alt="css-icon" width={50}/>
+                    <img src={jsicon} alt="js-icon" width={50}/>
+                    <img src={reacticon} alt="react-icon" width={50}/>
+                    <img src={nodeicon} alt="node-icon" width={50}/>
+                    <img src={pythonicon} alt="python-icon" width={50}/>
+                </div>
+            </div>
         </div>
     );
 }
