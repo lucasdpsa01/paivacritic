@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+15&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+.jersey-15-regular {
+    font-family: "Jersey 15", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.lato-black {
+    font-family: "Lato", serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background:#0e0e1f;
+    padding: 15px 20px;
+    color: white;
+}
+
+.header h1{
+    font-family: "Jersey 15", sans-serif;
+    font-size: 70px;
+}
+
+.link {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-family: "Lato", serif;
+}
+
+
+.nav {
+    height: 50px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
+
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        background: rgb(14, 14, 31);
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .nav.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}

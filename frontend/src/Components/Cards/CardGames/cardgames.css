@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&display=swap');
+.libertinus-sans-regular {
+  font-family: "Libertinus Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.carrosel{
+    width: 100%;
+}
+.container{
+    width: 100%;
+    display: flex;
+    overflow-x: hidden;
+    gap: 1rem;
+    padding: 1rem;
+}
+.head{
+    display: flex;
+    justify-content: space-between;
+}
+.btns{
+    display: flex;
+    gap: 5px;
+}
+.btn-esquerda,
+.btn-direita {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border: none;
+    cursor: pointer;
+}
+.btn-esquerda{
+    background-image: url("../../../images/seta-esquerda.png");
+}
+.btn-esquerda:hover{
+    background-image: url("../../../images/esquerda.png");
+}
+.btn-direita{
+    background-image: url("../../../images/seta-direita.png");
+}
+.btn-direita:hover{
+    background-image: url("../../../images/direita.png");
+}
+.icone-seta{
+    height: 50px;
+}
+.image-games{
+    height: 200px;
+    border-radius: 10px;
+}
+h2 {
+    font-family: "Libertinus Sans", sans-serif;
+    font-size: 19px;
+}
+.nome-jogo{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 150px;
+    display: inline-block;
+    cursor: default;
+    text-decoration: underline;
+}
