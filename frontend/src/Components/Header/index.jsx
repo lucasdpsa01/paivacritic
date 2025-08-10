@@ -22,6 +22,9 @@ export default function Header() {
                     <li>
                         <Link className="link" to="/sugestao"><p>Sugestões</p></Link>
                     </li>
+                    <li>
+                        <Link className="link" to="/"><p>Register</p></Link>
+                    </li>
                 </ul>
             </nav>
 
