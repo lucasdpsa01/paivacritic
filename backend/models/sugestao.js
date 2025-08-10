@@ -15,7 +15,7 @@ const Sugestao = database.define('Sugestao', {
     recomendacao: {
         type: DataTypes.STRING,
         allowNull: false
-    },
+    }
 }, {
     timestamps: true, 
     tableName: 'sugestoes' 
