@@ -27,6 +27,10 @@ const Jogo = sequelize.define('Gostei', {
     like: {
         type: DataTypes.BOOLEAN,
         allowNull: true
+    },
+    status: {
+        type: DataTypes.BOOLEAN,
+        allowNull: false
     }
 },{
     timestamps: true, // cria a data/hora que foi criado e a ultima atualização do registro

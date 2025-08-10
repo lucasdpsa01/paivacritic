@@ -16,7 +16,8 @@ router.post('/', async (req, res) => {
         nome_jogo: req.body.nome_jogo,
         rating: req.body.rating,
         message: req.body.message,
-        like: req.body.like
+        like: req.body.like,
+        status: req.body.status
     });
 
     res.status(201).json(jogos);
@@ -25,7 +26,7 @@ router.post('/', async (req, res) => {
 // Edita um jogo
 router.put('/:id_jogo', async (req, res) => {
     const id_jogo = req.params.id_jogo;
-    const { image, nome_jogo, rating, message, like } = req.body;
+    const { image, nome_jogo, rating, message, like, status } = req.body;
 
     const jogo = await Jogo.findByPk(id_jogo);
 
@@ -33,7 +34,7 @@ router.put('/:id_jogo', async (req, res) => {
         return res.send("Erro ao editar jogo");
     }
 
-    jogo.uptade({ image, nome_jogo, rating, message, like });
+    jogo.uptade({ image, nome_jogo, rating, message, like, status });
     res.send("Jogo editado com sucesso");
 });
 
