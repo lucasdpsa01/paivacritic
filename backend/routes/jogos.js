@@ -37,4 +37,16 @@ router.put('/:id_jogo', async (req, res) => {
     res.send("Jogo editado com sucesso");
 });
 
+router.delete('/:id_jogo', async (req, res) => {
+    const id_jogo = req.params.id_jogo;
+
+    const jogo = await Jogo.findByPk(id_jogo);
+
+    if (!jogo) {
+        res.send("Erro ao deletar jogo")
+    }
+    await jogo.destroy();
+    res.send("Jogo deletado com sucesso!")
+});
+
 module.exports = router;
