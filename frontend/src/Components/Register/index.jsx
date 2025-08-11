@@ -1,12 +1,18 @@
 import { useState, useEffect } from "react";
-import Signup from "./Singup";
+import Signup from "./Signup";
 import Login from "./Login";
 
 export default function Register() {
-    const [login, setlogin] = useState(false);
+    const [show, setShow] = useState(true);
+
+    function toggleComponent() {
+        setShow(!show)
+    }
     return(
         <div className="register">
-            <Register />
+            <Signup style={{ display: show ? 'block': 'none'}}/>
+            <Login style={{ display: show ? 'none': 'block'}}/>
+            <button onClick={toggleComponent}>Já tem Login? Entre aqui.</button>
         </div>
     )
 }

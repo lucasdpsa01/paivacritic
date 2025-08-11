@@ -1,7 +1,7 @@
 export default function Signup() {
     return(
         <div>
-            tchau
+            Oi
         </div>
     )
 }

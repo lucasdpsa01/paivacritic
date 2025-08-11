@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
 import { useState } from "react"
+import Register from "../Register"
 
 import "./header.css"
 import hamburger from "../../svg/hamburger.svg" 
@@ -7,6 +8,7 @@ import hamburger from "../../svg/hamburger.svg"
 export default function Header() {
 
     const [isOpen, setIsOpen] = useState(false);
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
     return (
         <header className="header">
@@ -23,7 +25,11 @@ export default function Header() {
                         <Link className="link" to="/sugestao"><p>Sugestões</p></Link>
                     </li>
                     <li>
-                        <Link className="link" to="/"><p>Register</p></Link>
+                        <button onClick={() => setIsModalOpen(true)}>Register</button>
+                        <Register
+                            isOpen={isModalOpen}
+                            onClose={()=> setIsModalOpen(false)}
+                        />
                     </li>
                 </ul>
             </nav>
