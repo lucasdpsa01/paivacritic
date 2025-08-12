@@ -3,10 +3,12 @@
     flex-direction: column;
     width: 550px;
 }
-
+.titulo h2{
+    font-size: 25px;
+}
 .switcher button{
-    background: #000000;
-    color: white;
+    background: #636367;
+    color: rgb(255, 255, 255);
     padding: 10px;
     border: none;
     border-radius: 5px;
@@ -15,4 +17,21 @@
     font-size: 16px;
     transition: background 0.3s;
     width: 170px;
+}
+.btn-close{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border: none;
+    cursor: pointer;
+    background-image: url("../../images/close.png");
+}
+.btn-close:hover{
+    background-image: url("../../images/cancel.png");
 }

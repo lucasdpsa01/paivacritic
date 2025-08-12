@@ -13,8 +13,8 @@ export default function Register({ isOpen, onClose }) {
         <div style={styles.overlay}>
             <div style={styles.modal} className="modal">
                 
-                <button onClick={onClose} style={styles.closeBtn}>X</button>
-                <div style={styles.titulo}>
+                <button onClick={onClose} style={styles.closeBtn} className="btn-close"></button>
+                <div style={styles.titulo} className="titulo">
                     <h2>paivacritic</h2>
                 </div>
 
@@ -52,7 +52,7 @@ const styles = {
     },
     titulo: {
         color: "black",
-        textAlign: "center"
+        textAlign: "center",
     },
     modal: {
         background: "#fff",
@@ -62,16 +62,13 @@ const styles = {
         position: "relative",
         gap: "30px"
     },
-    closeBtn: {
-        position: "absolute", top: "10px", right: "10px"
-    },
     switcher: {
         display: "flex",
         gap: "0.5rem",
         justifyContent: "center"
     },
     activeBtn: {
-        backgroundColor: "#8a8a8aff",
-        color: "black"
+        backgroundColor: "black",
+        color: "white"
     }
 };
