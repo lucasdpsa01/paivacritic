@@ -1,16 +1,42 @@
-import megaicon from "../../../images/megaman.png"
+import Register from "../../Register";
+import { useState } from "react";
 import "./index.css"
 
 export default function MainSobre() {
+
+    const [isOpen, setIsOpen] = useState(false);
+
+
     return (
         <div className="container-sobre">
-            <img src={megaicon} alt="megaman" height={90}/>
-            <div className="texto">
-                <h1>Bem-vindo ao Paivacritic!</h1>
-                <p>Sou uma pessoa apaixonada por jogos e tecnologia, e criei esta plataforma para reunir e avaliar os jogos que joguei ao longo de 2024.</p>
-                <p>O site é simples e feito por mim, com o objetivo de compartilhar minhas opiniões e permitir que outros usuários enviem sugestões de jogos. As atualizações serão feitas anualmente.</p>
-                <p>Estou sempre buscando melhorar, e sua participação é muito bem-vinda para tornar este espaço ainda mais interessante.</p>
+            <div className="sobre-titulo">
+                <h1>Bem Vindo ao paivacritic!</h1>
+                {/*imagem do site*/}
             </div>
+            <div className="sobre-tools">
+                <h2>Como funciona?</h2>
+                <p>O crítico e o criador dessa plataforma compartilha os jogos com a nota dele.</p>
+                {/*imagem jogo*/}
+                <p>Você pode concordar ou discordar!</p>
+                {/*imagem concorda e discorda*/}
+                <p>Se você gosta muito de jogo e viu que ele não jogou, você pode ir na seção de sugestões e comentare  a mensagem vai diretamento pro criador.</p>
+                {/*imagem sugestões*/}
+                <p>Atualizações constantes: Todo ano o site será atualizado com novos jogos.</p>
+                {/*imagem manutenção*/}
+            </div>
+            <div className="sobre-final">
+                <h2>Participe!</h2>
+                <p>Sua sugestão é muito importante.</p>
+                <p>Junte-se à nossa comunidade.</p>
+                <button onClick={() => setIsOpen(true)}> Register </button>
+            </div>
+
+            <Register
+                isOpen={isOpen}
+                onClose={() => setIsOpen(false)}
+            />
         </div>
+
+
     );
 }

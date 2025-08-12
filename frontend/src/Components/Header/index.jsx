@@ -19,7 +19,7 @@ export default function Header() {
             <nav>
                 <ul className={`nav ${isOpen ? "active" : ""}`}>
                     <li>
-                        <Link className="link" to="/sobre"><p>Sobre Mim</p></Link>
+                        <Link className="link" to="/sobre"><p>Sobre</p></Link>
                     </li>
                     <li>
                         <Link className="link" to="/sugestao"><p>Sugestões</p></Link>
