@@ -22,7 +22,7 @@
 
 .header {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     background:#0e0e1f;
     padding: 15px 20px;
@@ -37,17 +37,30 @@
 .link {
     text-decoration: none;
     color: white;
-    font-size: 20px;
+    font-size: 17px;
     font-family: "Lato", serif;
 }
+.btn-register {
+    height: 40px;
+    width: 75px;
+    font-size: 17px;
+    background-color: rgb(254, 185, 25);
+    border-radius: 10px;
+    cursor: pointer;
+    border-style: solid;
+    border-color: black;
+}
 
+.btn-register:hover{
+    background-color: rgb(253, 211, 111);
+}
 
 .nav {
     height: 50px;
     list-style: none;
     display: flex;
     align-items: center;
-    gap: 100px;
+    gap: 70px;
 }
 
 
