@@ -4,9 +4,11 @@ const sequelize = require('./config/db');
 
 const jogoRoutes = require('./routes/jogos')
 const sugestaoRoutes = require('./routes/sugestao');
+const userRoutes = require('./routes/user');
 
 const Jogo = require('./models/jogos');
-const Sugestao = require('./models/sugestao')
+const Sugestao = require('./models/sugestao');
+const User = require('./models/user');
 
 const app = express();
 const PORT = 3000;
