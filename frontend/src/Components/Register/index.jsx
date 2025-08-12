@@ -1,18 +1,67 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Signup from "./Signup";
 import Login from "./Login";
 
-export default function Register() {
-    const [show, setShow] = useState(true);
+import "./register.css"
 
-    function toggleComponent() {
-        setShow(!show)
-    }
-    return(
-        <div className="register">
-            <Signup style={{ display: show ? 'block': 'none'}}/>
-            <Login style={{ display: show ? 'none': 'block'}}/>
-            <button onClick={toggleComponent}>Já tem Login? Entre aqui.</button>
+export default function Register({ isOpen, onClose }) {
+    const [mode, setMode] = useState("signup"); // corrigido "singup" -> "signup"
+
+    if (!isOpen) return null;
+
+    return (
+        <div style={styles.overlay}>
+            <div style={styles.modal} className="modal">
+                <button onClick={onClose} style={styles.closeBtn}>X</button>
+
+                <div style={styles.switcher} className="switcher">
+                    <button
+                        onClick={() => setMode("signup")}
+                        style={mode === "signup" ? styles.activeBtn : {}}
+                    >
+                        Sign Up
+                    </button>
+                    <button
+                        onClick={() => setMode("login")}
+                        style={mode === "login" ? styles.activeBtn : {}}
+                    >
+                        Login
+                    </button>
+                </div>
+
+                <div style={{ marginTop: "1rem" }}>
+                    {mode === "signup" ? <Signup /> : <Login />}
+                </div>
+            </div>
         </div>
     )
 }
+
+const styles = {
+    overlay: {
+        position: "fixed",
+        top: 0, left: 0,
+        width: "100%", height: "100%",
+        backgroundColor: "rgba(0,0,0,0.5)",
+        display: "flex", justifyContent: "center", alignItems: "center",
+        zIndex: 1000
+    },
+    modal: {
+        background: "#fff",
+        padding: "1rem",
+        borderRadius: "8px",
+        minWidth: "300px",
+        position: "relative"
+    },
+    closeBtn: {
+        position: "absolute", top: "10px", right: "10px"
+    },
+    switcher: {
+        display: "flex",
+        gap: "0.5rem",
+        justifyContent: "center"
+    },
+    activeBtn: {
+        backgroundColor: "#ccc"
+    }
+};

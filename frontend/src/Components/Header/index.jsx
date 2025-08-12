@@ -26,14 +26,15 @@ export default function Header() {
                     </li>
                     <li>
                         <button onClick={() => setIsModalOpen(true)}>Register</button>
-                        <Register
-                            isOpen={isModalOpen}
-                            onClose={()=> setIsModalOpen(false)}
-                        />
                     </li>
                 </ul>
             </nav>
 
+            <Register
+                isOpen={isModalOpen}
+                onClose={() => setIsModalOpen(false)}
+            />
+            
             <button
                 className="hamburger"
                 onClick={() => setIsOpen(!isOpen)}
