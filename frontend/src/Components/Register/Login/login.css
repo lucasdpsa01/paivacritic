@@ -1,0 +1,9 @@
+.login, p{
+    color: black;
+}
+input{
+    height: 35px;
+}
+button {
+    height: 35px;
+}
