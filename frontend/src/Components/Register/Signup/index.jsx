@@ -1,21 +1,18 @@
+import "../Login/login.css"
+
 export default function Signup() {
-    return(
-        <div style={styles.signup}>
+    return (
+        <div className="login">
             <p>Comece com uma conta do Paivacritic para avaliar jogos!</p>
-            <input style={styles.input} type="text" placeholder="Nome" />
-            <input style={styles.input} type="email" placeholder="Email" />
-            <input style={styles.input} type="password" placeholder="Senha"/>
-            <button>Criar Conta</button>
+            <div className="form">
+                <label>Nome</label>
+                <input type="text"/>
+                <label>Email</label>
+                <input type="email"/>
+                <label>Senha</label>
+                <input type="password"/>
+                <button>Criar Conta</button>
+            </div>
         </div>
     )
-}
-const styles = {
-    signup: {
-        display: "flex",
-        flexDirection: "column",
-        gap: "10px"
-    },
-    input: {
-        height: "35px",
-    }
 }

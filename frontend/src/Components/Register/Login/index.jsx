@@ -2,18 +2,15 @@ import "./login.css"
 
 export default function Login() {
     return (
-        <div style={styles.login} className="login">
+        <div className="login">
             <p>Seja bem vindo de volta!</p>
-            <input type="email" placeholder="Email" />
-            <input type="password" placeholder="Senha" />
-            <button >Entrar</button>
+            <div className="form">
+                <label>Email</label>
+                <input type="email" />
+                <label>Senha</label>
+                <input type="password" />
+                <button >Entrar</button>
+            </div>
         </div>
     )
-}
-const styles = {
-    login: {
-        display: "flex",
-        flexDirection: "column",
-        gap: "10px",
-    }
 }

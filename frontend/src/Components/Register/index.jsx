@@ -5,7 +5,7 @@ import Login from "./Login";
 import "./register.css"
 
 export default function Register({ isOpen, onClose }) {
-    const [mode, setMode] = useState("signup"); // corrigido "singup" -> "signup"
+    const [mode, setMode] = useState("signup"); 
 
     if (!isOpen) return null;
 
@@ -33,7 +33,7 @@ export default function Register({ isOpen, onClose }) {
                     </button>
                 </div>
 
-                <div style={{ marginTop: "1rem" }}>
+                <div style={{ marginTop: "1rem" }} className="modal-troca">
                     {mode === "signup" ? <Signup /> : <Login />}
                 </div>
             </div>
@@ -71,6 +71,7 @@ const styles = {
         justifyContent: "center"
     },
     activeBtn: {
-        backgroundColor: "#ccc"
+        backgroundColor: "#8a8a8aff",
+        color: "black"
     }
 };

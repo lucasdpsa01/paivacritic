@@ -1,9 +1,16 @@
-.login, p{
+.login{
     color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
 }
 input{
     height: 35px;
+    width: 400px;
 }
 .login button {
     height: 35px;
+    width: 400px;
 }
