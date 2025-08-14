@@ -31,9 +31,22 @@
 
 .header h1{
     font-family: "Jersey 15", sans-serif;
-    font-size: 70px;
+    font-size: 67px;
 }
 
+.titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    gap: 3px;
+}
+
+
+.titulo h1 {
+    font-size: 60px;
+    color: white;
+}
 .link {
     text-decoration: none;
     color: white;

@@ -3,7 +3,8 @@ import { useState } from "react"
 import Register from "../Register"
 
 import "./header.css"
-import hamburger from "../../svg/hamburger.svg" 
+import hamburger from "../../svg/hamburger.svg"
+import icon2 from "../../images/icon2.png"
 
 export default function Header() {
 
@@ -12,7 +13,8 @@ export default function Header() {
 
     return (
         <header className="header">
-            <Link className="link" to="/">
+            <Link className="titulo" to="/">
+                <img src={icon2} alt="logo" height={50}/>
                 <h1>paivacritic</h1>
             </Link>
 

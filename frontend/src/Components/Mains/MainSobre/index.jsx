@@ -2,6 +2,9 @@ import Register from "../../Register";
 import { useState } from "react";
 import "./index.css"
 
+
+import paiva from "../../../images/paiva.png"
+
 export default function MainSobre() {
 
     const [isOpen, setIsOpen] = useState(false);
@@ -11,7 +14,7 @@ export default function MainSobre() {
         <div className="container-sobre">
             <div className="sobre-titulo">
                 <h1>Bem Vindo ao paivacritic!</h1>
-                {/*imagem do site*/}
+                <img src={paiva} alt="logo da pagina" />
             </div>
             <div className="sobre-tools">
                 <h2>Como funciona?</h2>
