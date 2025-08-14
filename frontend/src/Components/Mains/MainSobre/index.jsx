@@ -1,9 +1,9 @@
 import Register from "../../Register";
 import { useState } from "react";
-import "./index.css"
+import "./mainSobre.css"
 
-
-import paiva from "../../../images/paiva.png"
+import icon1 from "../../../favicon/icon1.svg"
+import img_manutencao from "../../../images/img_manutencao.svg"
 
 export default function MainSobre() {
 
@@ -14,7 +14,7 @@ export default function MainSobre() {
         <div className="container-sobre">
             <div className="sobre-titulo">
                 <h1>Bem Vindo ao paivacritic!</h1>
-                <img src={paiva} alt="logo da pagina" />
+                <img src={icon1} alt="logo da pagina" />
             </div>
             <div className="sobre-tools">
                 <h2>Como funciona?</h2>
@@ -25,13 +25,13 @@ export default function MainSobre() {
                 <p>Se você gosta muito de jogo e viu que ele não jogou, você pode ir na seção de sugestões e comentare  a mensagem vai diretamento pro criador.</p>
                 {/*imagem sugestões*/}
                 <p>Atualizações constantes: Todo ano o site será atualizado com novos jogos.</p>
-                {/*imagem manutenção*/}
+                <img src={img_manutencao} alt="imagem de manutenção" />
             </div>
             <div className="sobre-final">
                 <h2>Participe!</h2>
                 <p>Sua sugestão é muito importante.</p>
                 <p>Junte-se à nossa comunidade.</p>
-                <button onClick={() => setIsOpen(true)}> Register </button>
+                <button onClick={() => setIsOpen(true)} className="btn-sobre-register"> Register </button>
             </div>
 
             <Register

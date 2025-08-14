@@ -57,7 +57,7 @@
     height: 40px;
     width: 75px;
     font-size: 17px;
-    background-color: rgb(254, 185, 25);
+    background-color: #C9BD89;
     border-radius: 10px;
     cursor: pointer;
     border-style: solid;
@@ -65,7 +65,7 @@
 }
 
 .btn-register:hover{
-    background-color: rgb(253, 211, 111);
+    background-color: #f0e3a8;
 }
 
 .nav {
