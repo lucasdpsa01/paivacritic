@@ -1,7 +1,7 @@
 const sequelize = require('../config/db');
 const { DataTypes } = require('sequelize');
 
-const Jogo = sequelize.define('Gostei', {
+const Jogo = sequelize.define('Jogos', {
     id_jogo: {
         type: DataTypes.INTEGER,
         autoIncrement: true,
@@ -24,16 +24,12 @@ const Jogo = sequelize.define('Gostei', {
         type: DataTypes.STRING,
         allowNull: false
     },
-    like: {
-        type: DataTypes.BOOLEAN,
-        allowNull: true
-    },
     status: {
         type: DataTypes.BOOLEAN,
         allowNull: false
     }
 },{
-    timestamps: true, // cria a data/hora que foi criado e a ultima atualização do registro
+    timestamps: true,
     tableName: 'jogos'
 });
 
