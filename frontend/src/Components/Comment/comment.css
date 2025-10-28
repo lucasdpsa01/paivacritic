@@ -22,6 +22,8 @@
 .form{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 10px;
 }
 
@@ -59,18 +61,6 @@
     border-radius: 5px;
 }
 
-.form button{
-    background: #000000;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 100%;
-    font-size: 16px;
-    transition: background 0.3s;
-    width: 370px;
-}
 
 
 /*                     comentarios                      */

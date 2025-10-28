@@ -1,8 +1,9 @@
 import { useEffect, useState, useRef } from "react"
-import api from "../../services/api"
+import api from "../../services/api";
+import balao from "../../images/balao.png";
+
 
 import "./comment.css"
-import comment from "../../svg/comment.svg"
 
 export default function Comment() {
     const [sugests, setSugests] = useState([])
@@ -36,7 +37,7 @@ export default function Comment() {
 
             <form className="form">
                 <div className="name-icon">
-                    <img src={comment} alt="comentario-icon" height={35} />
+                    <img src={balao} alt="comentario-icon" height={35} />
                     <h2>Deixe um Comentário</h2>
                 </div>
                 <input name='nome' type="text" placeholder="Nome" ref={inputName} />
@@ -49,7 +50,7 @@ export default function Comment() {
                 <h2>Recomendações</h2>
                 <div className="users-comment">
                     {sugests.map((sugest) => (
-                        <div className="user-comment">
+                        <div className="user-comment" key={sugest.id}>
                             <p>Nome: {sugest.nome}</p>
                             <p>Recomendação: {sugest.recomendacao}</p>
                         </div>

@@ -24,7 +24,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background:#0e0e1f;
+    background:var(--header-bg);
     padding: 15px 20px;
     color: white;
 }
@@ -42,7 +42,6 @@
     gap: 3px;
 }
 
-
 .titulo h1 {
     font-size: 60px;
     color: white;
@@ -53,19 +52,9 @@
     font-size: 17px;
     font-family: "Lato", serif;
 }
-.btn-register {
-    height: 40px;
-    width: 75px;
-    font-size: 17px;
-    background-color: #C9BD89;
-    border-radius: 10px;
-    cursor: pointer;
-    border-style: solid;
-    border-color: black;
-}
 
-.btn-register:hover{
-    background-color: #f0e3a8;
+.link:hover{
+    text-decoration:underline;
 }
 
 .nav {

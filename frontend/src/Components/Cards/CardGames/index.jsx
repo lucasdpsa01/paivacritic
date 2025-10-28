@@ -15,6 +15,8 @@ export default function CardGames() {
         carroselRef.current.scrollBy({ left: 500, behavior: "smooth" });
     }
 
+    const JogosConcluido = jogos.filter((j) => j.situacao !== "Em breve");
+
     useEffect(() => {
         async function fetchJogos() {
             const { data, error } = await supabase
@@ -46,7 +48,7 @@ export default function CardGames() {
                 </div>
             </div>
             <div className="container" ref={carroselRef}>
-                {jogos
+                {JogosConcluido
                     .map((jogo) => (
                         <div key={jogo.id} className="gamescard">
                             {jogo.images_url && (

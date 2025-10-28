@@ -27,7 +27,7 @@ export default function Header() {
                         <Link className="link" to="/sugestao"><p>Sugestões</p></Link>
                     </li>
                     <li>
-                        <button onClick={() => setIsModalOpen(true)} className="btn-register"><h5>Register</h5></button>
+                        <button onClick={() => setIsModalOpen(true)} className="btn-register">Register</button>
                     </li>
                 </ul>
             </nav>

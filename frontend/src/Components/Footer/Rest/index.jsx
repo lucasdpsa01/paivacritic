@@ -1,6 +1,6 @@
-import facebook from "../../../images/facebook.png"
-import insta from "../../../images/instagram.png"
-import twitter from "../../../images/twitter.png"
+import linkedin from "../../../images/linkedin.png"
+import site from "../../../images/site.png"
+import github from "../../../images/github.png"
 
 import "./index.css"
 
@@ -8,11 +8,11 @@ export default function Rest() {
     return(
         <div className="rest">
             <div className="social-media">
-                <h2>Follow Me</h2>
+                <h3>Follow Me</h3>
                 <div className="social-icon">
-                    <a href="https://www.facebook.com/oimiga.aliko.3/"><img src={facebook} alt="facebook"/></a>
-                    <a href="https://www.instagram.com/lucas.paiva01/"><img src={insta} alt="instagram" /></a>
-                    <a href="https://x.com/lucass845584"><img src={twitter} alt="twitter" /></a>
+                    <a href="https://www.linkedin.com/in/paiva-sa01/"><img src={linkedin} alt="linkedin"/></a>
+                    <a href="https://paivasa.com/"><img src={site} alt="meu site" /></a>
+                    <a href="https://github.com/lucasdpsa01"><img src={github} alt="github" /></a>
                 </div>
             </div>
             <div className="right-reserved">
