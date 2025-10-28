@@ -1,3 +1,7 @@
+* {
+    padding: 0;
+    margin: 0;
+}
 .carrosel{
     width: 100%;
 }
@@ -5,35 +9,55 @@
     display: flex;
     justify-content: space-between;
 }
-.btns{
-    display: flex;
-    gap: 5px;
-}
-.btn-esquerda,
-.btn-direita {
-    width: 40px;
-    height: 40px;
-    background-color: transparent;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    border: none;
-    cursor: pointer;
-}
-.btn-esquerda{
-    background-image: url("../../../images/seta-para-a-esquerda.png");
-}
-
-.btn-direita{
-    background-image: url("../../../images/seta-para-a-direita.png");
-}
 
 .icone-seta{
     height: 50px;
 }
 
+.slider {
+    width: 100%;
+    height: var(--height);
+    mask: linear-gradient(
+        to right,
+        transparent,
+        #000,
+        transparent
+
+    );
+}
+
+.slider:hover .brevecard{
+    animation-play-state: paused!important;
+}
+
+.slider .breve-container {
+    display: flex;
+    width: 100%;
+    min-width: calc(var(--width) * var(--quantity));
+    position: relative;
+}
+
+.slider .breve-container .brevecard {
+    width: var(--width);
+    height: var(--height);
+    position: absolute;
+    left:100%;
+    animation: autoRun 10s linear infinite;
+    animation-delay: calc((10s / var(--quantity)) * (var(--position) - 1));
+}
+
+@keyframes autoRun{
+    from{
+        left: 100%;
+    } to {
+        left: calc(var(--width) * -1);
+    }
+}
+
+
 .breve-container{
     width: 100%;
+    height: var(--height);
     display: flex;
     overflow-x: auto;
     scroll-behavior: smooth;

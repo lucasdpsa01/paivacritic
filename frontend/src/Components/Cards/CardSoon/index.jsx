@@ -7,14 +7,6 @@ export default function CardSoon() {
     const [jogos, setJogos] = useState([])
     const [loading, setLoading] = useState(true)
 
-    const carroselRef = useRef(null);
-    const scroolLeft = () => {
-        carroselRef.current.scrollBy({ left: -500, behavior: "smooth" });
-    }
-    const scroolRight = () => {
-        carroselRef.current.scrollBy({ left: 500, behavior: "smooth" });
-    }
-
     useEffect(() => {
         async function fetchJogos() {
             const { data, error } = await supabase
@@ -36,30 +28,29 @@ export default function CardSoon() {
 
     if (loading) return <p>Carregando Jogos....</p>
 
+    const jogosEmBreve = jogos.filter((j) => j.situacao === "Em breve");
+
     return (
         <div className="carrosel">
             <div className="head">
                 <h2>Em Breve</h2>
-                <div className="btns">
-                    <button className="btn-esquerda" onClick={scroolLeft}></button>
-                    <button className="btn-direita" onClick={scroolRight}></button>
-                </div>
             </div>
-            <div className="breve-container" ref={carroselRef} style={{ "--quantity": 7 }}>
-                {jogos
-                    .filter((jogo) => jogo.situacao === "Em breve")
-                    .map((jogo, index) => (
-                        <div key={jogo.id} className="brevecard" style={{ "--position": index + 1 }}>
-                            {jogo.images_url && (
-                                <img
-                                    src={jogo.images_url}
-                                    alt={jogo.nome}
-                                    className="jogo-imagem"
-                                />
-                            )}
-                            <h3 className="nome-jogo">{jogo.nome}</h3>
-                        </div>
-                    ))}
+            <div className="slider" style={{ "--width": "200.13px", "--height": "260px" }}>
+                <div className="breve-container" style={{ "--quantity": jogosEmBreve.length }}>
+                    {jogosEmBreve
+                        .map((jogo, index) => (
+                            <div key={jogo.id} className="brevecard" style={{ "--position": index + 1 }}>
+                                {jogo.images_url && (
+                                    <img
+                                        src={jogo.images_url}
+                                        alt={jogo.nome}
+                                        className="jogo-imagem"
+                                    />
+                                )}
+                                <h3 className="nome-jogo">{jogo.nome}</h3>
+                            </div>
+                        ))}
+                </div>
             </div>
         </div>
     )
