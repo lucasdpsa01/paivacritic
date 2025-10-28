@@ -27,6 +27,16 @@
     display: flex;
     justify-content: space-between;
 }
+.head h2:after{
+    content: "";
+    display: block;
+    bottom: 100px;
+    height: 4px;
+    width: 60vw;
+    background-color: var(--text-color);
+    margin: 5px auto 0;
+}
+
 .btns{
     display: flex;
     gap: 10px;
@@ -44,17 +54,17 @@
 }
 .btn-esquerda{
     background-image: url("../../../images/seta-para-a-esquerda.png");
-    filter: saturate(0);
+    filter: brightness(0.4);
 }
 
 .btn-direita{
     background-image: url("../../../images/seta-para-a-direita.png");
-    filter: saturate(0);
+    filter: brightness(0.4);
 }
 
 .btn-esquerda:hover,
 .btn-direita:hover {
-    filter: saturate(1);
+    filter: brightness(1);
 }
 
 .icone-seta{
@@ -69,6 +79,24 @@
 }
 h3 {
     font-size: 19px;
+}
+
+.rating-jogo{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#nota-jogo{
+    width: 30px;
+    text-align: center;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
 }
 
 .gamescard{

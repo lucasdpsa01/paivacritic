@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom"
 import { useState } from "react"
 import Register from "../Register"
+import Tema from "../Tema"
 
-import "./header.css"
 import hamburger from "../../svg/hamburger.svg"
 import icon2 from "../../images/icon2.png"
 
+import "./header.css"
 export default function Header() {
 
     const [isOpen, setIsOpen] = useState(false);
@@ -28,6 +29,9 @@ export default function Header() {
                     </li>
                     <li>
                         <button onClick={() => setIsModalOpen(true)} className="btn-register">Register</button>
+                    </li>
+                    <li>
+                        <Tema />
                     </li>
                 </ul>
             </nav>

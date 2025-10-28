@@ -21,7 +21,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 60px;
+    gap: 80px;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 

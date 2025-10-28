@@ -41,7 +41,7 @@ export default function CardGames() {
     return (
         <div className="carrosel">
             <div className="head">
-                <h2>Games</h2>
+                <h2 className="head-games">Games</h2>
                 <div className="btns">
                     <button className="btn-esquerda" onClick={scroolLeft}></button>
                     <button className="btn-direita" onClick={scroolRight}></button>
@@ -59,8 +59,23 @@ export default function CardGames() {
                                 />
                             )}
                             <h3 className="nome-jogo">{jogo.nome}</h3>
-                            <p>{jogo.nota}</p>
-                            <p>{jogo.situacao}</p>
+                            <div className="rating-jogo">
+                                <p
+                                    id="nota-jogo"
+                                    style={{
+                                        backgroundColor:
+                                            jogo.nota >= 90
+                                                ? "#00CE7A"
+                                                : jogo.nota >= 70
+                                                    ? "#9EFF00"
+                                                    : jogo.nota >= 40
+                                                        ? "#FFBD3F"
+                                                        : "#FF4D4D",
+                                        color: "black" // texto preto pra contraste no verde claro
+                                    }}
+                                >{jogo.nota}</p>
+                                <p>{jogo.situacao}</p>
+                            </div>
                         </div>
                     ))}
             </div>

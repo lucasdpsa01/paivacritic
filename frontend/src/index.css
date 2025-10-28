@@ -20,7 +20,7 @@
 }
 
 body.light {
-  --header-bg: #f3f3f3;
+  --header-bg: rgb(43, 43, 57);
   --text-color: #1e1e1e;
   --button-color: #f3f3f3;
   --body-bg: #d8d8db;
