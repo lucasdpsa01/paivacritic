@@ -28,6 +28,10 @@
 
 .slider:hover .brevecard{
     animation-play-state: paused!important;
+    filter: grayscale(1);
+}
+.slider:hover .brevecard:hover{
+    filter: grayscale(0);
 }
 
 .slider .breve-container {

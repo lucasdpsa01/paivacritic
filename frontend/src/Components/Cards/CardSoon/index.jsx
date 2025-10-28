@@ -35,7 +35,7 @@ export default function CardSoon() {
             <div className="head">
                 <h2>Em Breve</h2>
             </div>
-            <div className="slider" style={{ "--width": "200.13px", "--height": "260px" }}>
+            <div className="slider" style={{ "--width": "200.13px", "--height": "261px" }}>
                 <div className="breve-container" style={{ "--quantity": jogosEmBreve.length }}>
                     {jogosEmBreve
                         .map((jogo, index) => (

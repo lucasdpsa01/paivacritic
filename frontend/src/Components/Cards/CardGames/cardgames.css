@@ -14,6 +14,13 @@
 
     transform-style: preserve-3d;
     transform: perspective(1000px);
+    mask: linear-gradient(
+        to right,
+        transparent,
+        #000,
+        transparent
+
+    );
 }
 
 .head{
@@ -22,7 +29,7 @@
 }
 .btns{
     display: flex;
-    gap: 5px;
+    gap: 10px;
 }
 .btn-esquerda,
 .btn-direita {
@@ -37,10 +44,17 @@
 }
 .btn-esquerda{
     background-image: url("../../../images/seta-para-a-esquerda.png");
+    filter: saturate(0);
 }
 
 .btn-direita{
     background-image: url("../../../images/seta-para-a-direita.png");
+    filter: saturate(0);
+}
+
+.btn-esquerda:hover,
+.btn-direita:hover {
+    filter: saturate(1);
 }
 
 .icone-seta{
