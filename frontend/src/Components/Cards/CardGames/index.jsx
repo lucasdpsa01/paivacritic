@@ -48,7 +48,7 @@ export default function CardGames() {
             <div className="container" ref={carroselRef}>
                 {jogos
                     .map((jogo) => (
-                        <div key={jogo.id} className="brevecard">
+                        <div key={jogo.id} className="gamescard">
                             {jogo.images_url && (
                                 <img
                                     src={jogo.images_url}
@@ -56,9 +56,9 @@ export default function CardGames() {
                                     className="jogo-imagem"
                                 />
                             )}
-                            <h2>{jogo.nome}</h2>
+                            <h3 className="nome-jogo">{jogo.nome}</h3>
                             <p>{jogo.nota}</p>
-                            <h3>{jogo.situacao}</h3>
+                            <p>{jogo.situacao}</p>
                         </div>
                     ))}
             </div>

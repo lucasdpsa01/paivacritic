@@ -1,14 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-
-.roboto {
-  font-family: "Roboto", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: medium;
-  font-variation-settings:
-    "wdth" 100;
-}
-
 .carrosel{
     width: 100%;
 }
@@ -17,11 +6,14 @@
     display: flex;
     overflow-x: auto;
     scroll-behavior: smooth;
-    gap: 1rem;
+    gap: 2rem;
     padding: 1rem;
 
     scrollbar-width: none; 
     -ms-overflow-style: none;
+
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
 }
 
 .head{
@@ -44,28 +36,39 @@
     cursor: pointer;
 }
 .btn-esquerda{
-    background-image: url("../../../images/seta-esquerda.png");
+    background-image: url("../../../images/seta-para-a-esquerda.png");
 }
-.btn-esquerda:hover{
-    background-image: url("../../../images/esquerda.png");
-}
+
 .btn-direita{
-    background-image: url("../../../images/seta-direita.png");
+    background-image: url("../../../images/seta-para-a-direita.png");
 }
-.btn-direita:hover{
-    background-image: url("../../../images/direita.png");
-}
+
 .icone-seta{
     height: 50px;
 }
-.image-games{
+.jogo-imagem{
     height: 200px;
     border-radius: 10px;
+
+    object-fit: cover;
+    transition: transform 0.4s ease;
 }
-h2 {
-    
+h3 {
     font-size: 19px;
 }
+
+.gamescard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    transition: transform 0.5s ease;
+}
+
+.gamescard:hover{
+    transform: scale(1.1)
+}
+
 .nome-jogo{
     white-space: nowrap;
     overflow: hidden;
@@ -74,4 +77,5 @@ h2 {
     display: inline-block;
     cursor: default;
     text-decoration: underline;
+
 }

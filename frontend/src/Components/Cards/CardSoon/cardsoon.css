@@ -21,17 +21,13 @@
     cursor: pointer;
 }
 .btn-esquerda{
-    background-image: url("../../../images/seta-esquerda.png");
+    background-image: url("../../../images/seta-para-a-esquerda.png");
 }
-.btn-esquerda:hover{
-    background-image: url("../../../images/esquerda.png");
-}
+
 .btn-direita{
-    background-image: url("../../../images/seta-direita.png");
+    background-image: url("../../../images/seta-para-a-direita.png");
 }
-.btn-direita:hover{
-    background-image: url("../../../images/direita.png");
-}
+
 .icone-seta{
     height: 50px;
 }
@@ -39,17 +35,21 @@
 .breve-container{
     width: 100%;
     display: flex;
-    overflow-x: auto; /* mudei de hidden para auto */
+    overflow-x: auto;
     scroll-behavior: smooth;
     gap: 1rem;
     padding: 1rem;
 
-    scrollbar-width: none; /* Firefox */
+    scrollbar-width: none;
     -ms-overflow-style: none;
 }
 .brevecard{
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
 
 .jogo-imagem{
     height: 200px;

@@ -45,11 +45,11 @@ export default function CardSoon() {
                     <button className="btn-direita" onClick={scroolRight}></button>
                 </div>
             </div>
-            <div className="breve-container" ref={carroselRef}>
+            <div className="breve-container" ref={carroselRef} style={{ "--quantity": 7 }}>
                 {jogos
                     .filter((jogo) => jogo.situacao === "Em breve")
-                    .map((jogo) => (
-                        <div key={jogo.id} className="brevecard">
+                    .map((jogo, index) => (
+                        <div key={jogo.id} className="brevecard" style={{ "--position": index + 1 }}>
                             {jogo.images_url && (
                                 <img
                                     src={jogo.images_url}
@@ -57,9 +57,7 @@ export default function CardSoon() {
                                     className="jogo-imagem"
                                 />
                             )}
-                            <h2>{jogo.nome}</h2>
-                            <p>{jogo.nota}</p>
-                            <h3>{jogo.situacao}</h3>
+                            <h3 className="nome-jogo">{jogo.nome}</h3>
                         </div>
                     ))}
             </div>
