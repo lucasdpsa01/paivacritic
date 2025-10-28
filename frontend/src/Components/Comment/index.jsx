@@ -37,7 +37,7 @@ export default function Comment() {
             <form className="form">
                 <div className="name-icon">
                     <img src={comment} alt="comentario-icon" height={35} />
-                    <h1>Deixe um Comentário</h1>
+                    <h2>Deixe um Comentário</h2>
                 </div>
                 <input name='nome' type="text" placeholder="Nome" ref={inputName} />
                 <textarea name="sugestao" id="sugestao" rows="4" ref={inputRecomendacao} placeholder="Algum jogo que você recomenda? comente aqui 👇" />
@@ -46,7 +46,7 @@ export default function Comment() {
 
 
             <div className="container-comment">
-                <h1>Recomendações</h1>
+                <h2>Recomendações</h2>
                 <div className="users-comment">
                     {sugests.map((sugest) => (
                         <div className="user-comment">

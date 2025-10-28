@@ -8,7 +8,7 @@ export default function Rest() {
     return(
         <div className="rest">
             <div className="social-media">
-                <h1>Follow Me</h1>
+                <h2>Follow Me</h2>
                 <div className="social-icon">
                     <a href="https://www.facebook.com/oimiga.aliko.3/"><img src={facebook} alt="facebook"/></a>
                     <a href="https://www.instagram.com/lucas.paiva01/"><img src={insta} alt="instagram" /></a>

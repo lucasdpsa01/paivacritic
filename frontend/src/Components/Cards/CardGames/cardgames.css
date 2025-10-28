@@ -1,21 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&display=swap');
-.libertinus-sans-regular {
-  font-family: "Libertinus Sans", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+.roboto {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: medium;
+  font-variation-settings:
+    "wdth" 100;
+}
 
 .carrosel{
     width: 100%;
 }
-.container{
+.container {
     width: 100%;
     display: flex;
-    overflow-x: hidden;
+    overflow-x: auto;
+    scroll-behavior: smooth;
     gap: 1rem;
     padding: 1rem;
+
+    scrollbar-width: none; 
+    -ms-overflow-style: none;
 }
+
 .head{
     display: flex;
     justify-content: space-between;
@@ -55,7 +63,7 @@
     border-radius: 10px;
 }
 h2 {
-    font-family: "Libertinus Sans", sans-serif;
+    
     font-size: 19px;
 }
 .nome-jogo{

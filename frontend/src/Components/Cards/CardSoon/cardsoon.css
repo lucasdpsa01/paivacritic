@@ -1,0 +1,56 @@
+.carrosel{
+    width: 100%;
+}
+.head{
+    display: flex;
+    justify-content: space-between;
+}
+.btns{
+    display: flex;
+    gap: 5px;
+}
+.btn-esquerda,
+.btn-direita {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border: none;
+    cursor: pointer;
+}
+.btn-esquerda{
+    background-image: url("../../../images/seta-esquerda.png");
+}
+.btn-esquerda:hover{
+    background-image: url("../../../images/esquerda.png");
+}
+.btn-direita{
+    background-image: url("../../../images/seta-direita.png");
+}
+.btn-direita:hover{
+    background-image: url("../../../images/direita.png");
+}
+.icone-seta{
+    height: 50px;
+}
+
+.breve-container{
+    width: 100%;
+    display: flex;
+    overflow-x: auto; /* mudei de hidden para auto */
+    scroll-behavior: smooth;
+    gap: 1rem;
+    padding: 1rem;
+
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;
+}
+.brevecard{
+    
+}
+
+.jogo-imagem{
+    height: 200px;
+}
