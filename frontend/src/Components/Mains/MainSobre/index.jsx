@@ -1,9 +1,13 @@
 import Register from "../../Register";
 import { useState } from "react";
-import "./mainSobre.css"
 
 import icon1 from "../../../favicon/icon1.svg"
 import img_manutencao from "../../../images/img_manutencao.svg"
+import jogoexemplo from "../../../images/jogoexemplo.png"
+import recomendacao from "../../../images/recomentacao.png"
+import sugestao from "../../../images/sugestao.png"
+
+import "./mainSobre.css"
 
 export default function MainSobre() {
 
@@ -19,10 +23,11 @@ export default function MainSobre() {
             <div className="sobre-tools">
                 <h2>Como funciona?</h2>
                 <p>O crítico e o criador dessa plataforma compartilha os jogos com a nota dele.</p>
-                {/*imagem jogo*/}
+                <img src={jogoexemplo} alt="jogo de exemplo" className="jogoexemplo"/>
                 <p>Você pode concordar ou discordar!</p>
-                {/*imagem concorda e discorda*/}
                 <p>Se você gosta muito de jogo e viu que ele não jogou, você pode ir na seção de sugestões e comentare  a mensagem vai diretamento pro criador.</p>
+                <img src={sugestao} alt="imagem de sugestão" className="sugestao"/>
+                <img src={recomendacao} alt="imagem de recomendação" className="recomendacao"/>
                 {/*imagem sugestões*/}
                 <p>Atualizações constantes: Todo ano o site será atualizado com novos jogos.</p>
                 <img src={img_manutencao} alt="imagem de manutenção" />

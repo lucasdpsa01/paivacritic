@@ -1,32 +1,12 @@
-/* Fontes */
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
-
-.lato-black {
-    font-family: "Lato", serif;
-    font-weight: 900;
-    font-style: normal;
-}
-
-.lato-black-pequeno {
-    font-family: "Lato-pequeno", serif;
-    font-weight: 600;
-    font-style: normal;
-}
-
-
-.mulish {
-    font-family: "Mulish", serif;
-    font-optical-sizing: auto;
-    font-weight: 200;
-    font-style: normal;
-}
-.mulish-pequeno {
-    font-family: "Mulish-pequeno", serif;
-    font-optical-sizing: auto;
-    font-weight: 100;
-    font-style: normal;
-}
-
 /* CSS */
+
+.sobre-titulo{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+}
+
+.sobre-titulo img{
+    height: 70px;
+}
