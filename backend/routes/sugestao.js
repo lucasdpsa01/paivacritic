@@ -14,17 +14,12 @@ router.get('/', async (req, res) => {
 
 // Rota para criar uma sugestão
 router.post('/', async (req, res) => {
-    try {
-        const { nome, recomendacao } = req.body;
-        if (!nome || !recomendacao) {
-            return res.status(400).json({ error: "Nome e recomendação são obrigatórios!" });
-        }
-
-        const novaSugestao = await Sugestao.create({ nome, recomendacao });
-        res.status(201).json(novaSugestao);
-    } catch (error) {
-        res.status(500).json({ error: "Erro ao criar sugestão." });
-    }
+    
+        const sugestao = await Sugestao.create({
+            nome: req.body.nome,
+            recomendacao: req.body.recomendacao
+        });
+        res.status(201).json(sugestao);
 });
 
 // Rota para deletar uma sugestão por nome

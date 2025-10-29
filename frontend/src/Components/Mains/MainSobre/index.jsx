@@ -13,7 +13,7 @@ export default function MainSobre() {
     return (
         <div className="container-sobre">
             <div className="sobre-titulo">
-                <h1>Bem Vindo ao paivacritic!</h1>
+                <h2>Bem Vindo ao paivacritic!</h2>
                 <img src={icon1} alt="logo da pagina" />
             </div>
             <div className="sobre-tools">
