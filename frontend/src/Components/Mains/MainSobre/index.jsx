@@ -1,11 +1,10 @@
-import Register from "../../Register";
-import { useState } from "react";
+import Register from "../../Register/index"
+import { useState } from "react"
 
 import icon1 from "../../../favicon/icon1.svg"
 import img_manutencao from "../../../images/img_manutencao.svg"
 import jogoexemplo from "../../../images/jogoexemplo.png"
 import recomendacao from "../../../images/recomentacao.png"
-import sugestao from "../../../images/sugestao.png"
 
 import "./mainSobre.css"
 
@@ -16,35 +15,41 @@ export default function MainSobre() {
 
     return (
         <div className="container-sobre">
-            <div className="sobre-titulo">
-                <h2>Bem Vindo ao paivacritic!</h2>
-                <img src={icon1} alt="logo da pagina" />
+            <div className="sobre-titulo1">
+                <h2>Bem-vindo ao PaivaCritic!</h2>
+                <img src={icon1} alt="logo da página" className="logo-sobre"/>
             </div>
-            <div className="sobre-tools">
+            <div className="sobre-titulo2">
                 <h2>Como funciona?</h2>
-                <p>O crítico e o criador dessa plataforma compartilha os jogos com a nota dele.</p>
-                <img src={jogoexemplo} alt="jogo de exemplo" className="jogoexemplo"/>
-                <p>Você pode concordar ou discordar!</p>
-                <p>Se você gosta muito de jogo e viu que ele não jogou, você pode ir na seção de sugestões e comentare  a mensagem vai diretamento pro criador.</p>
-                <img src={sugestao} alt="imagem de sugestão" className="sugestao"/>
-                <img src={recomendacao} alt="imagem de recomendação" className="recomendacao"/>
-                {/*imagem sugestões*/}
-                <p>Atualizações constantes: Todo ano o site será atualizado com novos jogos.</p>
-                <img src={img_manutencao} alt="imagem de manutenção" />
+                <p className="item1">O <strong>paivacritic</strong> é uma plataforma criada por um apaixonado por jogos, onde cada título recebe uma análise sincera e uma nota baseada em experiência real.</p>
             </div>
+            <section className="sobre-titulo3">
+                <img src={jogoexemplo} alt="jogo de exemplo" className="jogoexemplo" />
+                <p className="item2">
+                    Mas aqui, sua voz também conta! Concorde,
+                    discorde e compartilhe sua própria visão sobre cada jogo. Viu que um jogo
+                    incrível ainda não está no site? Vá até a seção de <strong>Sugestões </strong>
+                    e envie sua recomendação — sua mensagem vai direto para o criador.
+                </p>
+            </section>
+            <div className="sobre-titulo4"> 
+                <img src={recomendacao} alt="imagem de recomendação" className="recomendacao" />
+                <p className="item3"><strong>Atualizações constantes:</strong> o PaivaCritic está sempre evoluindo! A cada ano, novas análises, categorias e recursos são adicionados para deixar a experiência ainda mais completa.</p>
+            </div>
+                <h2>O Futuro do PaivaCritic</h2>
             <div className="sobre-final">
-                <h2>Participe!</h2>
-                <p>Sua sugestão é muito importante.</p>
-                <p>Junte-se à nossa comunidade.</p>
-                <button onClick={() => setIsOpen(true)} className="btn-sobre-register"> Register </button>
+                <img src={img_manutencao} alt="imagem de manutenção" className="img_manutencao" />
+                <p>
+                    Nosso objetivo é transformar o PaivaCritic em uma grande comunidade de jogadores, onde cada crítica, comentário e sugestão ajuda a moldar o futuro do site.
+                    Em breve, teremos novas funcionalidades, rankings personalizados, sistema de avaliações dos usuários e muito mais!
+                    <strong>Participe, opine e cresça com a gente.</strong>
+                </p>
             </div>
-
-            <Register
-                isOpen={isOpen}
-                onClose={() => setIsOpen(false)}
-            />
+            <div>
+                <Register
+                
+                />
+            </div>
         </div>
-
-
     );
 }
