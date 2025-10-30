@@ -4,8 +4,16 @@ const Sugestao = require('../models/sugestao');
 
 // Rota para obter todas as sugestões
 router.get('/', async (req, res) => {
+    const limit = parseInt(req.query.limit) || 5;
+    const page = parseInt(req.query.page) || 1;
+    const offset = (page - 1) * limit;
+    
     try {
-        const sugestoes = await Sugestao.findAll();
+        const sugestoes = await Sugestao.findAll({
+            limit,
+            offset,
+            order: [["createdAt", "DESC"]],
+        });
         res.json(sugestoes);
     } catch (error) {
         res.status(500).json({ error: "Erro ao buscar sugestões." });

@@ -1,5 +1,9 @@
 import { useEffect, useState, useRef } from "react"
+import { formatDistanceToNow, parseISO } from 'date-fns'
+import { ptBR } from 'date-fns/locale'
+
 import api from "../../services/api";
+
 import balao from "../../images/balao.png";
 
 
@@ -47,16 +51,28 @@ export default function Comment() {
 
 
             <div className="container-comment">
-                <h2>Recomendações</h2>
+                <h2>Comentários</h2>
                 <div className="users-comment">
-                    {sugests.map((sugest) => (
+                    {[...sugests].reverse().map((sugest) => (
                         <div className="user-comment" key={sugest.id}>
-                            <p>Nome: {sugest.nome}</p>
-                            <p>Recomendação: {sugest.recomendacao}</p>
+                            <div className="user-titulo">
+                                <h3>{sugest.nome}</h3>
+                                <p>
+                                    <small>
+                                        {sugest.createdAt
+                                            ? formatDistanceToNow(parseISO(sugest.createdAt), {
+                                                addSuffix: true,
+                                                locale: ptBR
+                                            })
+                                            : "Data não disponível"}
+                                    </small>
+                                </p>
+                            </div>
+                            <p>{sugest.recomendacao}</p>
                         </div>
                     ))}
                 </div>
             </div>
-        </div>
+        </div >
     )
 }

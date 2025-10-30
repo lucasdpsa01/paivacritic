@@ -14,9 +14,10 @@
     height: auto;
     width: 1100px;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    gap: 30px;
 }
 
 .form{
@@ -24,7 +25,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    width: 900px;
     gap: 10px;
+}
+.form input{
+    width: 200px;
 }
 
 .name-icon{
@@ -74,14 +80,21 @@
 
 .users-comment{
     padding: 30px;
-    height: 500px;
+    height: auto;
     scroll-behavior: smooth;
     gap: 1.2rem;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scrollbar-width: thin;
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
+}
+
+.user-titulo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
 }
 
 .container-comment h2{
@@ -89,10 +102,11 @@
     font-size: 50px;
 }
 
+
 .user-comment{
+    background-color: #1a1a1a;
+    color: #fff;
     padding: 20px;
-    color: white;
-    background-color: rgb(14, 14, 31);
     border-radius: 10px;
     
 }
