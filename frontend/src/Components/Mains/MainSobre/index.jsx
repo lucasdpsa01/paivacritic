@@ -17,7 +17,7 @@ export default function MainSobre() {
         <div className="container-sobre">
             <div className="sobre-titulo1">
                 <h2>Bem-vindo ao PaivaCritic!</h2>
-                <img src={icon1} alt="logo da página" className="logo-sobre"/>
+                <img src={icon1} alt="logo da página" className="logo-sobre" />
             </div>
             <div className="sobre-titulo2">
                 <h2>Como funciona?</h2>
@@ -32,11 +32,11 @@ export default function MainSobre() {
                     e envie sua recomendação — sua mensagem vai direto para o criador.
                 </p>
             </section>
-            <div className="sobre-titulo4"> 
+            <div className="sobre-titulo4">
                 <img src={recomendacao} alt="imagem de recomendação" className="recomendacao" />
                 <p className="item3"><strong>Atualizações constantes:</strong> o PaivaCritic está sempre evoluindo! A cada ano, novas análises, categorias e recursos são adicionados para deixar a experiência ainda mais completa.</p>
             </div>
-                <h2>O Futuro do PaivaCritic</h2>
+            <h2>O Futuro do PaivaCritic</h2>
             <div className="sobre-final">
                 <img src={img_manutencao} alt="imagem de manutenção" className="img_manutencao" />
                 <p>
@@ -46,9 +46,16 @@ export default function MainSobre() {
                 </p>
             </div>
             <div>
-                <Register
-                
-                />
+                <div>
+                    <button onClick={() => setIsOpen(true)} className="btn-open-register">
+                        Entrar / Registrar
+                    </button>
+
+                    <Register
+                        isOpen={isOpen}
+                        onClose={() => setIsOpen(false)}
+                    />
+                </div>
             </div>
         </div>
     );
