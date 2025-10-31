@@ -1,18 +1,58 @@
 /* CSS */
+.linear {
+    height: 250px;
+    width: 100%;
+    text-align: center;
+    background: linear-gradient(135deg, #0E0E1F 0%, #0A2342 40%, #C9BD89 75%, #FFFFFF 100%);
+    background-size: 300% 300%;
+    animation: gradientMove 10s ease infinite;
+}
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.logo-sobre{
+    position: absolute;
+    top: 12%;
+    left: 50%;
+
+    width: 300px;
+    z-index: 0;
+}
 .container-sobre{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     
-    gap: 25px;
+    gap: 5rem;
     width: 40%;
     margin-top: 30px;
     margin-bottom: 30px;
 }
-
 .sobre-titulo1 {
-    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+
+}
+
+.sobre-h2{
+    position: relative;
+    top: 30px;
+    font-size: 6rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    background: none;
+    -webkit-text-stroke: 0 transparent;
+    letter-spacing: 1px;
+    z-index: 1;
+    mix-blend-mode: difference;
 }
 
 .sobre-titulo2{
@@ -21,7 +61,12 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    gap: 20px;
 }
+.sobre-titulo2 h2{
+    font-size: 2.6rem;
+}
+
 .sobre-titulo2 p {
     text-align: center;
 }
@@ -33,7 +78,12 @@
     flex-direction: row-reverse;
     justify-content: center;
     align-items: center;
-    
+}
+
+.sobre-titulo-section{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
 .sobre-titulo4{
@@ -42,6 +92,10 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+}
+
+.section-p{
+    text-align: center;
 }
 .sobre-final{
     display: flex;
@@ -52,23 +106,21 @@
 }
 
 .jogoexemplo{
-    height: 270px;
+    height: 400px;
     
     object-fit: contain;
 }
 
 .recomendacao{
     height: 200px;
-    
+    border: 2px solid #C9BD89;
     object-fit: contain;
 }
 .img_manutencao{
-    height: 200px;
+    height: 150px;
     object-fit: contain;
 }
 
-.sobre-titulo1 img{
-    height: 70px;
-
-    object-fit: contain;
+.container-sobre p {
+    font-size: 1.2rem;
 }

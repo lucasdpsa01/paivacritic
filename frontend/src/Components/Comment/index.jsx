@@ -14,55 +14,62 @@ export default function Comment() {
     const inputRecomendacao = useRef()
 
     async function getComment(pageNumber = 1) {
-        try {
-            const res = await api.get(`/sugestao?page=${pageNumber}&limit=5`)
+    try {
+      const res = await api.get(`/sugestao?page=${pageNumber}&limit=5`);
 
-            if (res.data.length === 0) {
-                setHasMore(false);
-            } else {
-                setSugests(prev => {
-                    const existingIds = new Set(prev.map(item => item.id));
-                    const newItems = res.data.filter(item => !existingIds.has(item.id));
-                    return [...prev, ...newItems];
-                });
-            }
-        } catch (err) {
-            console.error("Error ao buscar comentários: ", err);
-        }
+      if (res.data.length === 0) {
+        setHasMore(false);
+        return;
+      }
 
+      setSugests(prev => {
+        const existingIds = new Set(prev.map(item => item.id));
+        const newItems = res.data.filter(item => !existingIds.has(item.id));
+        return [...newItems.reverse(), ...prev];
+      });
+
+    } catch (err) {
+      console.error("Erro ao buscar comentários: ", err);
     }
+  }
 
     async function createComment() {
-        await api.post('/sugestao', {
-            nome: inputName.current.value,
-            recomendacao: inputRecomendacao.current.value
-        });
-        inputName.current.value = "";
-        inputRecomendacao.current.value = "";
-        setPage(1);
-        getComment(1);
-    }
+    if (!inputName.current.value || !inputRecomendacao.current.value) return;
 
-    useEffect(() => {
-        getComment()
-    }, [])
+    try {
+      const res = await api.post('/sugestao', {
+        nome: inputName.current.value,
+        recomendacao: inputRecomendacao.current.value
+      });
+
+      setSugests(prev => [res.data, ...prev]);
+
+      inputName.current.value = "";
+      inputRecomendacao.current.value = "";
+    } catch (err) {
+      console.error("Erro ao criar comentário:", err);
+    }
+  }
+
+  useEffect(() => {
+    getComment();
+  }, []);
 
     return (
         <div className="comment">
             <form className="form">
                 <div className="name-icon">
-                    <img src={balao} alt="comentario-icon" height={35} />
                     <h2>Deixe um Comentário</h2>
                 </div>
-                <input name='nome' type="text" placeholder="Nome" ref={inputName} />
-                <textarea name="sugestao" id="sugestao" rows="4" ref={inputRecomendacao} placeholder="Algum jogo que você recomenda? comente aqui 👇" />
+                <input name='nome' type="text" placeholder="Nome" ref={inputName} required/>
+                <textarea name="sugestao" id="sugestao" rows="4" ref={inputRecomendacao} placeholder="Algum jogo que você recomenda? comente aqui 👇" required/>
                 <button type='button' onClick={createComment}>Enviar</button>
             </form>
 
             <div className="container-comment">
-                <h2>Comentários</h2>
+                <h2>{sugests.length} comentários</h2>
                 <div className="users-comment">
-                    {sugests.map((sugest) => (
+                    {[...sugests].reverse().map((sugest) => (
                         <div className="user-comment" key={sugest.id}>
                             <div className="user-titulo">
                                 <h3>{sugest.nome}</h3>
