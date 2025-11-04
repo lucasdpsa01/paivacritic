@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Jersey+15&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 .jersey-15-regular {
@@ -43,7 +42,7 @@
 }
 
 .titulo h1 {
-    font-size: 60px;
+    font-size: clamp(1.8rem, 10vw, 5rem);
     color: white;
 }
 .link {
@@ -58,39 +57,13 @@
 }
 
 .nav {
-    height: 50px;
-    list-style: none;
     display: flex;
     align-items: center;
-    gap: 70px;
+    gap: 3rem;
+    list-style: none;
 }
 
 
-.hamburger {
-    display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-@media (max-width: 768px) {
-    .nav {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 80px;
-        right: 0;
-        background: rgb(14, 14, 31);
-        width: 100%;
-        text-align: center;
-        padding: 10px 0;
-    }
-
-    .nav.active {
-        display: flex;
-    }
-
-    .hamburger {
-        display: block;
-    }
+@media (max-width: 1350px) {
+    
 }

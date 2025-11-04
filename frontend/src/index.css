@@ -32,11 +32,13 @@ body.dark {
   --body-bg: #1c1c28;
 }
 
-body {
+body, html {
   background-color: var(--body-bg);
   color: var(--text-color);
   transition: background-color 0.3s ease, color 0.3s ease;
   height: 100%;
+  width: 100%;
+  overflow-x: hidden;
 }
 h2 {
   color: var(--text-color);

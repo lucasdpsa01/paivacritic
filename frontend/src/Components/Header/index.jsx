@@ -7,8 +7,8 @@ import hamburger from "../../svg/hamburger.svg"
 import icon2 from "../../images/icon2.png"
 
 import "./header.css"
-export default function Header() {
 
+export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
     const [isModalOpen, setIsModalOpen] = useState(false);
 
