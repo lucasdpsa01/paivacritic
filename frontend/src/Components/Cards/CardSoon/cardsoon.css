@@ -63,7 +63,8 @@
     width: 100%;
     height: var(--height);
     display: flex;
-    overflow-x: auto;
+    overflow-x: hidden;
+    overflow-y: hidden;
     scroll-behavior: smooth;
     gap: 1rem;
     padding: 1rem;

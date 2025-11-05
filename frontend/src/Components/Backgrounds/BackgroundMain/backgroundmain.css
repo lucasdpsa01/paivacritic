@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
@@ -27,18 +27,19 @@
     margin-bottom: 20px;
 }
 
-
-@media(max-width: 1000px) {
-    .container-backs{
-        width: 100%;
+@media(max-width: 930px) {
+    .container-backs {
+        width: 90%;
     }
 }
 
+/*
 @media (max-width:768px) {
     .container-backs {
         width: 100%;
         align-items: start;
         margin-left: 20px;
     }
-
+    
 }
+*/
