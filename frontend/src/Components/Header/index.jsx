@@ -18,8 +18,8 @@ export default function Header() {
                 <h1>paivacritic</h1>
             </Link>
 
-            <nav className="nav">
-                <ul>
+            <nav>
+                <ul className="nav">
                     <li>
                         <Link className="link" to="/sobre"><p>Sobre</p></Link>
                     </li>

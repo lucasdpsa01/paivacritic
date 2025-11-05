@@ -26,6 +26,7 @@
     background:var(--header-bg);
     padding: 15px 20px;
     color: white;
+    z-index: 1000;
 }
 
 .header h1{
