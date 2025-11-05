@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 import { useState } from "react"
-import Register from "../Register"
 import Tema from "../Tema"
+import Nav from "../Nav"
 
 import hamburger from "../../svg/hamburger.svg"
 import icon2 from "../../images/icon2.png"
@@ -9,8 +9,7 @@ import icon2 from "../../images/icon2.png"
 import "./header.css"
 
 export default function Header() {
-    const [isOpen, setIsOpen] = useState(false);
-    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isNav, setIsNav] = useState(false);
 
     return (
         <header className="header">
@@ -19,8 +18,8 @@ export default function Header() {
                 <h1>paivacritic</h1>
             </Link>
 
-            <nav>
-                <ul className={`nav ${isOpen ? "active" : ""}`}>
+            <nav className="nav">
+                <ul>
                     <li>
                         <Link className="link" to="/sobre"><p>Sobre</p></Link>
                     </li>
@@ -28,25 +27,22 @@ export default function Header() {
                         <Link className="link" to="/sugestao"><p>Sugestões</p></Link>
                     </li>
                     <li>
-                        <button onClick={() => setIsModalOpen(true)} className="btn-register">Register</button>
-                    </li>
-                    <li>
                         <Tema />
                     </li>
                 </ul>
             </nav>
 
-            <Register
-                isOpen={isModalOpen}
-                onClose={() => setIsModalOpen(false)}
+            <Nav 
+                isOpen={isNav}
+                navClose={() => setIsNav(false)}
             />
-            
+
             <button
-                className="hamburger"
-                onClick={() => setIsOpen(!isOpen)}
+                className="hambuger"
+                onClick={() => setIsNav(true)}
                 aria-label="Abrir menu"
             >
-                <img src={hamburger} alt="Ícone do menu" height={50}/>
+                <img src={hamburger} alt="ícone de menu"/>
             </button>
         </header>
     );

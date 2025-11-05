@@ -1,6 +1,22 @@
 .navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 20rem;
+    height: 100%;
+    background-color: aquamarine;
+}
+.navbar-container {
     display: flex;
     flex-direction: column;
-    width: 40%;
-    height: 100%;
+    align-items: center;
+    gap: 20px;
+    
+}
+
+.navbar-btn{
+    align-self: center;
+    height: 40px;
+    padding-top: 10px;
+    cursor: pointer;
 }

@@ -63,7 +63,18 @@
     list-style: none;
 }
 
+.hambuger{
+    display: none;
+}
 
-@media (max-width: 1350px) {
-    
+@media (max-width: 1050px) {
+    .nav{
+        display: none;
+    }
+    .hambuger{
+        display: initial;
+    }
+    .hambuger img {
+        width: 20px;
+    }
 }

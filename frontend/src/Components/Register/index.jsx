@@ -17,7 +17,6 @@ export default function Register({ isOpen, onClose }) {
                 <div style={styles.titulo} className="titulo">
                     <h2>paivacritic</h2>
                 </div>
-
                 <div style={styles.switcher} className="switcher">
                     <button
                         onClick={() => setMode("signup")}
@@ -32,7 +31,6 @@ export default function Register({ isOpen, onClose }) {
                         Login
                     </button>
                 </div>
-
                 <div style={{ marginTop: "1rem" }} className="modal-troca">
                     {mode === "signup" ? <Signup /> : <Login />}
                 </div>

@@ -1,5 +1,4 @@
 import { useState } from "react"
-import Register from "../../Register/index"
 
 import icon1 from "../../../favicon/icon1.svg"
 import img_manutencao from "../../../images/img_manutencao.svg"
@@ -59,18 +58,6 @@ export default function MainSobre() {
                         <strong>Participe, opine e cresça com a gente.</strong>
                     </p>
                 </section>
-            </div>
-            <div className="sobre-titulo5">
-                <div>
-                    <button onClick={() => setIsOpen(true)} className="btn-open-register">
-                        Entrar / Registrar
-                    </button>
-
-                    <Register
-                        isOpen={isOpen}
-                        onClose={() => setIsOpen(false)}
-                    />
-                </div>
             </div>
         </div>
     );
