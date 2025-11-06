@@ -54,10 +54,10 @@ export default function MainSobre() {
                     <p>
                         Em breve, teremos novas funcionalidades, rankings personalizados, sistema de avaliações dos usuários e muito mais!
                     </p>
-                    <p className="section-p">
-                        <strong>Participe, opine e cresça com a gente.</strong>
-                    </p>
                 </section>
+            </div>
+            <div className="section-p">
+                <p><strong>Participe, opine e cresça com a gente.</strong></p>
             </div>
         </div>
     );

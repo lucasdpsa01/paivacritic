@@ -1,51 +1,69 @@
 /* CSS */
 .linear {
-    height: 250px;
+    height: 100%;
     width: 100%;
+    position: absolute;
+    inset: 0;
+    z-index: 1;
     text-align: center;
     background: linear-gradient(135deg, #0E0E1F 0%, #0A2342 40%, #C9BD89 75%, #FFFFFF 100%);
     background-size: 300% 300%;
     animation: gradientMove 10s ease infinite;
 }
+
 @keyframes gradientMove {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
-.logo-sobre{
+.logo-sobre {
     position: absolute;
     top: 12%;
     left: 50%;
-
-    width: 300px;
+    height: auto;
+    width: clamp(120px, 20vw, 250px);
     z-index: 0;
 }
-.container-sobre{
+
+.container-sobre {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+
     gap: 5rem;
-    width: 40%;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    width: min(90%, 1000px);
+    margin: 30px auto;
+    text-align: center;
 }
+
 .sobre-titulo1 {
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     width: 100%;
-    height: auto;
+    overflow: hidden;
 
 }
 
-.sobre-h2{
+.sobre-h2 {
     position: relative;
     top: 30px;
-    font-size: 6rem;
+    font-size: clamp(2rem, 8vw, 6rem);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 90%;
     font-weight: 800;
     text-transform: uppercase;
     background: none;
@@ -55,7 +73,7 @@
     mix-blend-mode: difference;
 }
 
-.sobre-titulo2{
+.sobre-titulo2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -63,7 +81,8 @@
     flex-wrap: wrap;
     gap: 20px;
 }
-.sobre-titulo2 h2{
+
+.sobre-titulo2 h2 {
     font-size: 2.6rem;
 }
 
@@ -73,31 +92,32 @@
 
 .sobre-titulo3 {
     gap: 50px;
-    
+
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
     align-items: center;
 }
 
-.sobre-titulo-section{
+.sobre-titulo-section {
     display: flex;
     flex-direction: column;
     gap: 30px;
 }
 
-.sobre-titulo4{
+.sobre-titulo4 {
     gap: 50px;
-    
+
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.section-p{
+.section-p {
     text-align: center;
 }
-.sobre-final{
+
+.sobre-final {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
@@ -105,22 +125,68 @@
     gap: 40px;
 }
 
-.jogoexemplo{
-    height: 400px;
-    
+.section-p {
+    text-align: center;
+}
+
+.jogoexemplo {
+    height: clamp(200px, 30vw, 400px);
+
     object-fit: contain;
 }
 
-.recomendacao{
-    height: 200px;
+.recomendacao {
+    height: clamp(100px, 15vw, 200px);
     border: 2px solid #C9BD89;
     object-fit: contain;
 }
-.img_manutencao{
-    height: 150px;
+
+.img_manutencao {
+    height: clamp(100px, 12vw, 150px);
     object-fit: contain;
 }
 
 .container-sobre p {
     font-size: 1.2rem;
+}
+
+@media (max-width: 900px) {
+    .sobre-titulo3,
+    .sobre-titulo4,
+    .sobre-final {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sobre-titulo-section {
+        align-items: center;
+    }
+}
+
+@media (max-width: 700px) {
+  .sobre-h2 {
+    font-size: clamp(1.5rem, 8vw, 3rem);
+  }
+
+  .logo-sobre {
+    width: clamp(100px, 25vw, 180px);
+  }
+
+  .linear {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .container-sobre {
+    gap: 2rem;
+  }
+
+  .container-sobre p {
+    font-size: 1rem;
+  }
+
+  .sobre-h2 {
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
 }
