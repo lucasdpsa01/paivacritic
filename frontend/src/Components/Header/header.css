@@ -31,7 +31,6 @@
 
 .header h1{
     font-family: "Jersey 15", sans-serif;
-    font-size: 67px;
 }
 
 .titulo{
@@ -77,5 +76,11 @@
     }
     .hambuger img {
         width: 20px;
+    }
+}
+
+@media (max-width: 410px) {
+    .titulo h1{
+        display: none;
     }
 }

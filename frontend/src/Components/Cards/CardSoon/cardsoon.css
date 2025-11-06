@@ -2,36 +2,51 @@
     padding: 0;
     margin: 0;
 }
-.carrosel{
+
+.carrosel {
     width: 100%;
 }
-.head{
+
+.head {
     display: flex;
     justify-content: space-between;
 }
 
-.icone-seta{
+.icone-seta {
     height: 50px;
 }
 
 .slider {
     width: 100%;
     height: var(--height);
-    mask: linear-gradient(
-        to right,
-        transparent,
-        #000,
-        transparent
-
-    );
+    mask: linear-gradient(to right,
+            transparent,
+            #000,
+            transparent);
 }
 
-.slider:hover .brevecard{
-    animation-play-state: paused!important;
-    filter: grayscale(1);
+@media (hover: none) and (pointer: coarse) {
+    .slider:hover .brevecard {
+        animation-play-state: running !important;
+        filter: none;
+    }
+
+    .slider:hover .brevecard:hover {
+        filter: none;
+    }
+
 }
-.slider:hover .brevecard:hover{
-    filter: grayscale(0);
+
+@media (hover: hover) and (pointer: fine) {
+    .slider:hover .brevecard {
+        animation-play-state: paused !important;
+        filter: grayscale(1);
+    }
+
+    .slider:hover .brevecard:hover {
+        filter: grayscale(0);
+    }
+
 }
 
 .slider .breve-container {
@@ -45,21 +60,23 @@
     width: var(--width);
     height: var(--height);
     position: absolute;
-    left:100%;
+    left: 100%;
     animation: autoRun 10s linear infinite;
     animation-delay: calc((10s / var(--quantity)) * (var(--position) - 1));
 }
 
-@keyframes autoRun{
-    from{
+@keyframes autoRun {
+    from {
         left: 100%;
-    } to {
+    }
+
+    to {
         left: calc(var(--width) * -1);
     }
 }
 
 
-.breve-container{
+.breve-container {
     width: 100%;
     height: var(--height);
     display: flex;
@@ -72,7 +89,8 @@
     scrollbar-width: none;
     -ms-overflow-style: none;
 }
-.brevecard{
+
+.brevecard {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -80,6 +98,6 @@
 }
 
 
-.jogo-imagem{
+.jogo-imagem {
     height: 200px;
 }
