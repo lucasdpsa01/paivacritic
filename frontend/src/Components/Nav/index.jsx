@@ -33,13 +33,13 @@ export default function Nav({ isOpen, navClose }) {
                     <h2>paivacritic</h2>
                 </section>
                 <section className="nav-sec2">
-                    <img src={cancel} alt="sair" onClick={navClose} className="navbar-btn" />
+                    <img src="https://zvthzrqyqghxxrojjdnf.supabase.co/storage/v1/object/public/tools%20icons/iconx.png" alt="sair" onClick={navClose} className="navbar-btn" />
                 </section>
             </div>
             <div className="navbar-container">
+                <Link to="/" className="nav-text"><h3>Início</h3><img src="https://zvthzrqyqghxxrojjdnf.supabase.co/storage/v1/object/public/tools%20icons/link.png" height={20}/></Link>
                 <Link to="/sobre" className="nav-text"><h3>Sobre</h3><img src="https://zvthzrqyqghxxrojjdnf.supabase.co/storage/v1/object/public/tools%20icons/link.png" height={20}/></Link>
                 <Link to="/sugestao" className="nav-text"><h3>Sugestões</h3><img src="https://zvthzrqyqghxxrojjdnf.supabase.co/storage/v1/object/public/tools%20icons/link.png" height={20}/></Link>
-                <Tema />
             </div>
         </div>
     )
