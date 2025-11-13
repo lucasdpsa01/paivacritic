@@ -37,8 +37,8 @@ export default function Nav({ isOpen, navClose }) {
                 </section>
             </div>
             <div className="navbar-container">
-                <Link to="/sobre" className="nav-text"><h3>Sobre</h3><img src={link} height={20}/></Link>
-                <Link to="/sugestao" className="nav-text"><h3>Sugestões</h3><img src={link} height={20}/></Link>
+                <Link to="/sobre" className="nav-text"><h3>Sobre</h3><img src="https://zvthzrqyqghxxrojjdnf.supabase.co/storage/v1/object/public/tools%20icons/link.png" height={20}/></Link>
+                <Link to="/sugestao" className="nav-text"><h3>Sugestões</h3><img src="https://zvthzrqyqghxxrojjdnf.supabase.co/storage/v1/object/public/tools%20icons/link.png" height={20}/></Link>
                 <Tema />
             </div>
         </div>

@@ -54,12 +54,12 @@
     cursor: pointer;
 }
 .btn-esquerda{
-    background-image: url("../../../images/seta-para-a-esquerda.png");
+    background-image: url("https://zvthzrqyqghxxrojjdnf.supabase.co/storage/v1/object/public/tools%20icons/seta-para-a-esquerda.png");
     filter: brightness(0.4);
 }
 
 .btn-direita{
-    background-image: url("../../../images/seta-para-a-direita.png");
+    background-image: url("https://zvthzrqyqghxxrojjdnf.supabase.co/storage/v1/object/public/tools%20icons/seta-para-a-direita.png");
     filter: brightness(0.4);
 }
 
