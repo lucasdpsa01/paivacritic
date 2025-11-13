@@ -1,7 +1,6 @@
 import { useEffect, useState, useRef } from "react"
 import { formatDistanceToNow, parseISO } from 'date-fns'
 import { ptBR } from 'date-fns/locale'
-import balao from "../../images/balao.png";
 import "./comment.css"
 
 import api from "../../services/api";
@@ -63,7 +62,7 @@ export default function Comment() {
                 </div>
                 <input name='nome' type="text" placeholder="Nome" ref={inputName} required/>
                 <textarea name="sugestao" id="sugestao" rows="4" ref={inputRecomendacao} placeholder="Algum jogo que você recomenda? comente aqui 👇" required/>
-                <button type='button' onClick={createComment}>Enviar</button>
+                <button type='button' onClick={createComment} className="enviar-btn">Enviar</button>
             </form>
 
             <div className="container-comment">
