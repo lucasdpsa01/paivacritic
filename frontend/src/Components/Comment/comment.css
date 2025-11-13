@@ -61,14 +61,16 @@
     gap: 15px;
 }
 .container-comment h2{
-    padding-left: 5px;
+    padding-left: 20px;
+    align-self: baseline;
+    width: 100%;
 }
 .container-comment h2:after{
     content: "";
     display: block;
     bottom: 100px;
     height: 4px;
-    width: 95%;
+    width: 90%;
     background-color: var(--text-color);
     margin: 5px;
 }
