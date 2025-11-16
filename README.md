@@ -38,7 +38,7 @@ Antes de começar, certifique-se de ter instalado:
 ```git clone [https://github.com/paivadpsa01](https://github.com/lucasdpsa01/front---paivacritic.git)](https://github.com/lucasdpsa01/paivacritic.git) ```
 
 2) Acesse a pasta
-```bash cd frontendc```
+```cd frontend```
 
 3) Instale as dependências:
 ```npm install```
