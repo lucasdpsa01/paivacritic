@@ -6,9 +6,9 @@ export default function Rest() {
             <div className="social-media">
                 <h3>Follow Me</h3>
                 <div className="social-icon">
-                    <a href="https://www.linkedin.com/in/paiva-sa01/"><img src="https://zvthzrqyqghxxrojjdnf.supabase.co/storage/v1/object/public/tools%20icons/linkedin.png" alt="linkedin"/></a>
-                    <a href="https://paivasa.com/"><img src="https://zvthzrqyqghxxrojjdnf.supabase.co/storage/v1/object/public/tools%20icons/site.png" alt="meu site" /></a>
-                    <a href="https://github.com/lucasdpsa01"><img src="https://zvthzrqyqghxxrojjdnf.supabase.co/storage/v1/object/public/tools%20icons/github.png" alt="github" /></a>
+                    <a target="_black" href="https://www.linkedin.com/in/paiva-sa01/"><img src="https://zvthzrqyqghxxrojjdnf.supabase.co/storage/v1/object/public/tools%20icons/linkedin.png" alt="linkedin"/></a>
+                    <a target="_black" href="https://paivasa.com/"><img src="https://zvthzrqyqghxxrojjdnf.supabase.co/storage/v1/object/public/tools%20icons/site.png" alt="meu site" /></a>
+                    <a target="_black" href="https://github.com/lucasdpsa01"><img src="https://zvthzrqyqghxxrojjdnf.supabase.co/storage/v1/object/public/tools%20icons/github.png" alt="github" /></a>
                 </div>
             </div>
             <div className="right-reserved">
