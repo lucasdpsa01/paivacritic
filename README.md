@@ -16,7 +16,8 @@ Este projeto foi desenvolvido com as seguintes tecnologias:
 ## 📸 Demonstração
 
 Na aba home
-<img width="2560" height="1380" alt="paivacritic — Mozilla Firefox 28_10_2025 20_29_59" src="https://github.com/user-attachments/assets/9bdbd3c9-c803-4ed9-9747-af4753c9d704" />
+<img width="2560" height="1380" alt="paivacritic — Mozilla Firefox 16_11_2025 08_13_43" src="https://github.com/user-attachments/assets/b71fbe2f-0e35-42be-9658-226adbedec29" />
+
 
 Na aba sobre mim
 <img width="2560" height="1380" alt="paivacritic — Mozilla Firefox 16_11_2025 08_13_55" src="https://github.com/user-attachments/assets/1de1f5d8-5d93-4434-9230-3bc85bb1bd7c" />
