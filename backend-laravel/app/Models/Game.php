@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Attributes\Fillable;
 
-#[Fillable(['nome_jogo', 'imagem_jogo', 'nota'])]
+#[Fillable(['nome_jogo', 'imagem_jogo', 'nota', 'descricao'])]
 class Game extends Model
 {
     public function comment() {

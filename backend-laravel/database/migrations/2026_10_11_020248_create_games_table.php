@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('nome_jogo');
             $table->string('imagem_jogo');
+            $table->text('descricao');
             $table->float('nota');
             $table->timestamps();
         });
