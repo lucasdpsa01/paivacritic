@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
-#[Fillable(['name', 'email', 'password'])]
+#[Fillable(['name', 'email', 'password', 'date_of_birth'])]
 #[Hidden(['password', 'remember_token'])]
 class User extends Authenticatable
 {
@@ -22,6 +22,10 @@ class User extends Authenticatable
      *
      * @return array<string, string>
      */
+    public function comment() {
+        return $this->hasMany(Comment::class, 'id_users');
+    }
+    
     protected function casts(): array
     {
         return [
