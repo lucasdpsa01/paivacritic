@@ -20,16 +20,14 @@ class GameController extends Controller
             'nome_jogo' => 'required|string|max:255',
             'imagem_jogo' => 'required|string',
             'nota' => 'required|numeric|min:0|max:10',
-            'categories' => 'array',
-            'descricao' => 'required|text',
+            'descricao' => 'required|string',
+            'categories' => 'required|array|min:1|max:2',
             'categories.*' => 'exists:categories,id',
         ]);
 
         $game = Game::create($dados);
 
-        if (isset($dados['categories'])) {
-            $game->categories()->sync($dados['categories']);
-        }
+        $game->categories()->sync($dados['categories']);
 
         return response()->json($game->load('categories'), 201);
     }
@@ -46,16 +44,15 @@ class GameController extends Controller
             'nome_jogo' => 'required|string|max:255',
             'imagem_jogo' => 'required|string',
             'nota' => 'required|numeric|min:0|max:10',
-            'categories' => 'array',
-            'descricao' => 'required|text',
+            'descricao' => 'required|string|max:1000',
+            'categories' => 'required|array|min:1|max:2',
             'categories.*' => 'exists:categories,id',
         ]);
 
         $game->update($dados);
 
-        if (isset($dados['categories'])) {
-            $game->categories()->sync($dados['categories']);
-        }
+        $game->categories()->sync($dados['categories']);
+        
         return $game->load('categories');
     }
 

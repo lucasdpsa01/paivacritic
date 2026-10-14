@@ -43,7 +43,7 @@ class UserController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * PUT/PATCH -> Atualiza os novos dados
      */
     public function update(Request $request, User $user)
     {
@@ -60,7 +60,7 @@ class UserController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * DELETE
      */
     public function destroy(User $user)
     {
