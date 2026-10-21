@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Game;
 use App\Models\Comment;
 use Illuminate\Http\Request;
 
@@ -13,16 +14,17 @@ class CommentController extends Controller
     }
 
     // POST -> cria
-    public function store(Request $request) {
+    public function store(Request $request, Game $game) {
         $dados = $request->validate([
-            'id_users'   => 'required|exists:users,id',
-            'id_games'   => 'required|exists:games,id',
             'comentario' => 'required|string|max:1000',
         ]);
 
-        $comentario = Comment::create($dados);
+        $comentario = $game->comments()->create([
+            'comentario' => $dados['comentario'],
+            'id_users' => $request->user()->id,
+        ]);
 
-        return response()->json($comentario, 201);
+        return response()->json($comentario->load('user:id,name'), 201);
     }
 
     //GET expecifico
