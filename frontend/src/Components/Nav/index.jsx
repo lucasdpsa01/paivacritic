@@ -9,7 +9,6 @@ import link from "../../images/link.png"
 import "./nav.css"
 
 export default function Nav({ isOpen, navClose }) {
-    
     const [closing, setClosing] = useState(false)
     
     useEffect(() => {

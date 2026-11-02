@@ -22,13 +22,13 @@ export default function Register({ isOpen, onClose }) {
                         onClick={() => setMode("signup")}
                         style={mode === "signup" ? styles.activeBtn : {}}
                     >
-                        Sign Up
+                        Cadastro
                     </button>
                     <button
                         onClick={() => setMode("login")}
                         style={mode === "login" ? styles.activeBtn : {}}
                     >
-                        Login
+                        Entrar
                     </button>
                 </div>
                 <div style={{ marginTop: "1rem" }} className="modal-troca">

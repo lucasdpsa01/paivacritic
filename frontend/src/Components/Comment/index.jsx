@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from "react"
+/* import { useEffect, useState, useRef } from "react"
 import { formatDistanceToNow, parseISO } from 'date-fns'
 import { ptBR } from 'date-fns/locale'
 import "./comment.css"
@@ -103,4 +103,4 @@ export default function Comment() {
             </div>
         </div >
     )
-}
+} */

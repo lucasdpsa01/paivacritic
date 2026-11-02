@@ -2,6 +2,7 @@ import { Link } from "react-router-dom"
 import { useState } from "react"
 import Tema from "../Tema"
 import Nav from "../Nav"
+import Register from "../Register"
 
 import hamburger from "../../svg/hamburger.svg"
 import icon2 from "../../images/icon2.png"
@@ -10,6 +11,7 @@ import "./header.css"
 
 export default function Header() {
     const [isNav, setIsNav] = useState(false);
+    const [isModal, setIsModal] = useState(false);
 
     return (
         <header className="header">
@@ -28,6 +30,19 @@ export default function Header() {
                     </li>
                     <li>
                         <Tema />
+                    </li>
+                    <li>
+                        <Register
+                            isOpen={isModal}
+                            onClose={()=> setIsModal(false)}
+                        />
+                    </li>
+                    <li>
+                        <button
+                            onClick={() => setIsModal(true)}
+                        >
+                            <p>Login/Cadastro</p>
+                        </button>
                     </li>
                 </ul>
             </nav>
