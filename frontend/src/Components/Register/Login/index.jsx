@@ -1,10 +1,12 @@
 import api from "../../../services/api";
+import { useState } from "react";
 import "./login.css"
 
 export default function Login() {
     const [email, setEmail] = useState("");
     const [password, SetPassword] = useState("");
     const [erro, setErro] = useState("");
+
 
     async function entrar(e) {
         e.preventDefault();

@@ -1,4 +1,3 @@
-/* 
 import { useEffect, useState, useRef } from "react"
 
 import "./cardsoon.css"
@@ -54,4 +53,4 @@ export default function CardSoon() {
             </div>
         </div>
     )
-} */
+} 
